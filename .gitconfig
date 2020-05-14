@@ -5,4 +5,4 @@ tool = unityyamlmerge
 [mergetool "unityyamlmerge"]
 trustExitCode = false
 # Change this path locally according to https://docs.unity3d.com/Manual/SmartMerge.html
-cmd = '/Applications/Unity/Hub/Editor/2019.3.0f6/Unity.app/Contents/Tools/UnityYAMLMerge' merge -p "$BASE" "$REMOTE" "$LOCAL" "$MERGED"
+cmd = 'D:\Progs\Unity Installs\2019.3.0f6\Editor\Data\Tools\UnityYAMLMerge.exe' merge -p "$BASE" "$REMOTE" "$LOCAL" "$MERGED"
