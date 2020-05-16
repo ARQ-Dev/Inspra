@@ -53,4 +53,9 @@ public class ARTapToPlaceObject : MonoBehaviour
             }
         }
     }
+
+    public void InstantiateGO()
+    {
+        _spawnedObject = Instantiate(_goToInstantiate, new Vector3(1, 12, 3), Quaternion.Euler(0, 90, 0));
+    }
 }
