@@ -190,8 +190,8 @@ GameObject:
   - component: {fileID: 363218021}
   - component: {fileID: 363218020}
   - component: {fileID: 363218024}
-  - component: {fileID: 363218023}
   - component: {fileID: 363218022}
+  - component: {fileID: 363218023}
   m_Layer: 0
   m_Name: AR Session Origin
   m_TagString: Untagged
@@ -536,7 +536,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 363218023}
+      - m_Target: {fileID: 0}
         m_MethodName: InstantiateGO
         m_Mode: 1
         m_Arguments:
