@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -967,17 +967,17 @@ PrefabInstance:
     - target: {fileID: 1260543075478417860, guid: 214565612e1f5134eb26b76abbe78217,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.6995318
+      value: 2.4392486
       objectReference: {fileID: 0}
     - target: {fileID: 1260543075478417860, guid: 214565612e1f5134eb26b76abbe78217,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.355393
+      value: 1.8652717
       objectReference: {fileID: 0}
     - target: {fileID: 1260543075478417860, guid: 214565612e1f5134eb26b76abbe78217,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.000013044678
+      value: 0.0000055703654
       objectReference: {fileID: 0}
     - target: {fileID: 1357101363723389049, guid: 214565612e1f5134eb26b76abbe78217,
         type: 3}
@@ -1017,47 +1017,47 @@ PrefabInstance:
     - target: {fileID: 7329551917035397037, guid: 214565612e1f5134eb26b76abbe78217,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 4.2868223
+      value: 2.6900344
       objectReference: {fileID: 0}
     - target: {fileID: 7329551917035397037, guid: 214565612e1f5134eb26b76abbe78217,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.5274506
+      value: 1.9387441
       objectReference: {fileID: 0}
     - target: {fileID: 7329551917035397037, guid: 214565612e1f5134eb26b76abbe78217,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.000016527698
+      value: 0.0000070576916
       objectReference: {fileID: 0}
     - target: {fileID: 7724989125265179500, guid: 214565612e1f5134eb26b76abbe78217,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.5424225
+      value: 2.6016011
       objectReference: {fileID: 0}
     - target: {fileID: 7724989125265179500, guid: 214565612e1f5134eb26b76abbe78217,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.6671625
+      value: 1.5901608
       objectReference: {fileID: 0}
     - target: {fileID: 7724989125265179500, guid: 214565612e1f5134eb26b76abbe78217,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.000012052047
+      value: 0.000006500392
       objectReference: {fileID: 0}
     - target: {fileID: 8983221241871092536, guid: 214565612e1f5134eb26b76abbe78217,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.3965352
+      value: 2.5229154
       objectReference: {fileID: 0}
     - target: {fileID: 8983221241871092536, guid: 214565612e1f5134eb26b76abbe78217,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.6671625
+      value: 1.5901608
       objectReference: {fileID: 0}
     - target: {fileID: 8983221241871092536, guid: 214565612e1f5134eb26b76abbe78217,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.000011191187
+      value: 0.0000060360785
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 214565612e1f5134eb26b76abbe78217, type: 3}
