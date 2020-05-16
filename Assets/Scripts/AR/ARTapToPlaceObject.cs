@@ -39,17 +39,24 @@ public class ARTapToPlaceObject : MonoBehaviour
         if (!TryGetTouchPosition(out Vector2 touchPosition))
             return;
 
-        if(_aRRaycastManager.Raycast(touchPosition, hits, TrackableType.PlaneWithinPolygon))
+        if (_aRRaycastManager.Raycast(touchPosition, hits, TrackableType.PlaneWithinPolygon))
         {
             var hitPose = hits[0].pose;
 
-            if(_spawnedObject == null)
+            var camera = Camera.main;
+            var cameraForward = camera.transform.forward;
+            var cameraBering = new Vector3(cameraForward.x, 0, cameraForward.z).normalized;
+            var rotation = Quaternion.LookRotation(cameraBering);
+
+
+            if (_spawnedObject == null)
             {
-                _spawnedObject = Instantiate(_goToInstantiate, hitPose.position, hitPose.rotation);
+                _spawnedObject = Instantiate(_goToInstantiate, hitPose.position, rotation);
             }
             else
             {
                 _spawnedObject.transform.position = hitPose.position;
+                _spawnedObject.transform.eulerAngles = rotation.eulerAngles;
             }
         }
     }
