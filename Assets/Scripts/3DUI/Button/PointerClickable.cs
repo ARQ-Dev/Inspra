@@ -10,6 +10,7 @@ namespace ARQ.UIKit.TD
 
         public void OnPointerClick(PointerEventData eventData)
         {
+            Debug.Log("here");
             OnClick();
         }
     }

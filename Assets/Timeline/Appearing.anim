@@ -70,7 +70,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material.Vector1_74CF4840
-    path: MaleKidneys
+    path: GameObject/MaleKidneysChannels
     classID: 23
     script: {fileID: 0}
   - curve:
@@ -98,7 +98,35 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material.Vector1_74CF4840
-    path: MaleKidneysChannels
+    path: GameObject/MaleKidneys
+    classID: 23
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 370
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 3
+        value: -370
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material.Vector1_74CF4840
+    path: GameObject/Male_Fake_Heart
     classID: 23
     script: {fileID: 0}
   m_PPtrCurves: []
@@ -117,14 +145,21 @@ AnimationClip:
       customType: 22
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3446903675
+      path: 4159685387
       attribute: 2414920764
       script: {fileID: 0}
       typeID: 23
       customType: 22
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3108713090
+      path: 652124954
+      attribute: 2414920764
+      script: {fileID: 0}
+      typeID: 23
+      customType: 22
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 2733516102
       attribute: 2414920764
       script: {fileID: 0}
       typeID: 23
@@ -205,7 +240,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material.Vector1_74CF4840
-    path: MaleKidneys
+    path: GameObject/MaleKidneysChannels
     classID: 23
     script: {fileID: 0}
   - curve:
@@ -233,7 +268,35 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: material.Vector1_74CF4840
-    path: MaleKidneysChannels
+    path: GameObject/MaleKidneys
+    classID: 23
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 370
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 3
+        value: -370
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material.Vector1_74CF4840
+    path: GameObject/Male_Fake_Heart
     classID: 23
     script: {fileID: 0}
   m_EulerEditorCurves: []
