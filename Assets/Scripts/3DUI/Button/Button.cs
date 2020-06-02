@@ -22,7 +22,6 @@ namespace ARQ.UIKit.TD
 
         private void OnClick()
         {
-            Debug.Log("here");
             OnButtonClick.Invoke();
         }
 

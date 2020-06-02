@@ -6,40 +6,57 @@ using UnityEngine.Playables;
 public class StopTimeline2 : MonoBehaviour
 {
     public PlayableDirector director;
-    public Animator Male;
-    public Animator Female;
     public Animator Canv;
-    public Animator Button;
-
-    public bool isItSecond;
-
+    public Animator Models;
     void OnEnable()
     {
-        if(isItSecond) Button.SetTrigger("Holding");
-        Canv.SetTrigger("isPause");
-        if (isItSecond)
+        director.playableGraph.GetRootPlayable(0).SetSpeed(0);
+        if (Models.isActiveAndEnabled)
         {
-            Male.SetTrigger("FullHolding");
-            Female.SetTrigger("FullHolding");
+            Models.Play("ModelsIdle");
         }
-        else
-        {
-            Male.SetTrigger("Holding");
-            Female.SetTrigger("HoldingFemale");
-        }
-        director.Pause();
     }
 
     public void UnPause()
     {
-        Debug.Log("here");
-        if (isItSecond) Button.ResetTrigger("Holding");
-        if (isItSecond) Button.SetTrigger("nothing");
-        Canv.ResetTrigger("isPause");
-        if (!isItSecond) Male.ResetTrigger("Holding");
-        else Male.SetTrigger("FullHolding");
-        Female.SetTrigger("HoldingFemale");
-        director.Resume();
+        director.playableGraph.GetRootPlayable(0).SetSpeed(1);
     }
 
+    public void AppearingMessage()
+    {
+        Canv.Play("AppearingMessage");
+    }
+    public void HidingMessage()
+    {
+        Canv.Play("HidingMessage");
+    }
+
+    public void AppearingPlashka(string NamePlashka)
+    {
+        Canv.Play(NamePlashka);
+    }
+    public void HidingPlashka(string NamePlashka)
+    {
+        Canv.Play(NamePlashka);
+    }
+
+
+    public void DropRisks()
+    {
+        director.time = 95;
+        director.playableGraph.GetRootPlayable(0).SetSpeed(1);
+    }
+
+    public void ReturnInspra()
+    {
+        director.time = 90;
+        director.playableGraph.GetRootPlayable(0).SetSpeed(1);
+
+    }
+
+    public void Reasons()
+    {
+        director.time = 66;
+        director.playableGraph.GetRootPlayable(0).SetSpeed(1);
+    }
 }

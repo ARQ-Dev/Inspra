@@ -6,27 +6,21 @@ using UnityEngine.Playables;
 public class stopTimeline : MonoBehaviour
 {
     public PlayableDirector director;
-    public Animator Aaldosterone_level_right;
     public Animator Male;
-    public Animator Canv;
-
+    public Animator Level;
+    public AudioSource audioSource;
     void OnEnable()
     {
-        Aaldosterone_level_right.SetTrigger("TriggerFlash");
-        Male.SetTrigger("TriggerFlash");
-        Canv.SetTrigger("TriggerFlash");
-        director.Pause();
+        director.playableGraph.GetRootPlayable(0).SetSpeed(0);
+        Male.Play("MaleFlash");
+        Level.Play("IndicatorFlash");
+
+
     }
 
     public void UnPause()
     {
-        Aaldosterone_level_right.ResetTrigger("TriggerFlash");
-        Aaldosterone_level_right.SetTrigger("Unflash");
-        Male.ResetTrigger("TriggerFlash");
-        Male.SetTrigger("Unflash");
-        Canv.ResetTrigger("TriggerFlash");
-        Canv.SetTrigger("Unpause");
-        director.Resume();
+        director.playableGraph.GetRootPlayable(0).SetSpeed(1);
     }
     
 }
