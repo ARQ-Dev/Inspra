@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using DG.Tweening;
 using System.Collections;
-using System.Collections.Generic;
 
 namespace ARQ.NeuroSym.UIKit
 {
