@@ -4,26 +4,26 @@ using UnityEngine;
 
 public abstract class ViewController : MonoBehaviour
 {
+    private EFE_Base _panelController;
+
     #region Methods
 
     public void Open()
     {
-        gameObject.SetActive(true);
+        _panelController.OpenPanel(gameObject);
+    }
+
+    protected void Awake()
+    {
+        _panelController = FindObjectOfType<EFE_Base>();
     }
 
     #endregion
 
-    protected void Present(ViewController viewController, object message)
+    protected void Present(ViewController viewController)
     {
-        viewController.gameObject.SetActive(true);
-        viewController.HandlePresentationMessage(message);
-        gameObject.SetActive(false);
-
+        _panelController.OpenPanel(viewController.gameObject);
     }
 
-    protected virtual void HandlePresentationMessage(object message)
-    {
-
-    }
 
 }

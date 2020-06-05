@@ -11,7 +11,11 @@ public class ChoiceViewController : ViewController
     private VisualizationInstantiator _instantiator;
 
     [SerializeField]
-    private ViewController _nextViewController;
+    private ViewController _visualizacionVC;
+
+    [SerializeField]
+    private ViewController _loginVC;
+
 
     #region MonoBehaviour
 
@@ -19,12 +23,15 @@ public class ChoiceViewController : ViewController
     {
         _view.FirstSelected += OnFirstSelected;
         _view.SecondSelected += OnSecondSelected;
+        _view.LogOutTapped += OnLogoutTapped;
+
     }
 
     private void OnDisable()
     {
         _view.FirstSelected -= OnFirstSelected;
         _view.SecondSelected -= OnSecondSelected;
+        _view.LogOutTapped -= OnLogoutTapped;
     }
 
     #endregion
@@ -32,13 +39,21 @@ public class ChoiceViewController : ViewController
     private void OnFirstSelected()
     {
         _instantiator.InstantiateFirst();
-        Present(_nextViewController, null);
+        Present(_visualizacionVC);
     }
 
     private void OnSecondSelected()
     {
         _instantiator.InstantiateSecond();
-        Present(_nextViewController, null);
+        Present(_visualizacionVC);
     }
+
+    private void OnLogoutTapped()
+    {
+        UserManager.Instance.DeleteUserData();
+        Present(_loginVC);
+    }
+
+
 
 }

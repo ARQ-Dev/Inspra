@@ -5,13 +5,13 @@ using System;
 public class VisualizationView : MonoBehaviour
 {
 
-    public event Action BackTapped;
+    public event Action CloseTapped;
 
     #region Methods
 
-    public void Back()
+    public void Close()
     {
-        BackTapped?.Invoke();
+        CloseTapped?.Invoke();
     }
 
     #endregion

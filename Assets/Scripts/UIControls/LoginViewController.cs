@@ -37,7 +37,7 @@ public class LoginViewController : ViewController
         {
            UserManager.Instance.WriteUserData(username, password);
             _view.SendResponse(true);
-            Present(_nextViewController, null);
+            Present(_nextViewController);
         }
         else
         {

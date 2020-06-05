@@ -21,6 +21,7 @@ public class LoginView : ViewController
         var username = _usernameField.text;
         var password = _passwordField.text;
         LoginTapped?.Invoke(username, password);
+        Clean();
     }
 
     #endregion
@@ -28,6 +29,12 @@ public class LoginView : ViewController
     public void SendResponse(bool isDataCorrect)
     {
 
+    }
+
+    private void Clean()
+    {
+        _usernameField.text = "";
+        _passwordField.text = "";
     }
 
 }

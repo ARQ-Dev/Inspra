@@ -7,6 +7,7 @@ public class ChoiceView : MonoBehaviour
 {
     public event Action FirstSelected;
     public event Action SecondSelected;
+    public event Action LogOutTapped;
 
     #region Methods
 
@@ -18,6 +19,11 @@ public class ChoiceView : MonoBehaviour
     public void Second()
     {
         SecondSelected?.Invoke();
+    }
+
+    public void LogOut()
+    {
+        LogOutTapped?.Invoke();
     }
 
     #endregion

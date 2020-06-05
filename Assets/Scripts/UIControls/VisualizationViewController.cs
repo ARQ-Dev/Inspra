@@ -14,19 +14,21 @@ public class VisualizationViewController : ViewController
 
     private void OnEnable()
     {
-        _view.BackTapped += OnBackTapped;
+        _view.CloseTapped += OnBackTapped;
     }
 
     private void OnDisable()
     {
-        _view.BackTapped -= OnBackTapped;
+        _view.CloseTapped -= OnBackTapped;
     }
 
     #endregion
 
     private void OnBackTapped()
     {
-        Present(_nextViewController, null);
+        Present(_nextViewController);
     }
+
+
 
 }
