@@ -21,7 +21,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Message
-  m_Shader: {fileID: 10101, guid: 0000000000000000e000000000000000, type: 0}
+  m_Shader: {fileID: -6465566751694194690, guid: 4b2127bd50c844b43ab8fe0c52045240,
+    type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -61,6 +62,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_4383654A: 1
+    - Vector1_54D95D8A: 1
+    - Vector1_7BA8B457: 0.99
+    - Vector1_7F5D304A: 0.03
+    - Vector1_860B56A3: 0.09
+    - Vector1_8CDD2817: 0.09
+    - Vector1_9D39BDF: 0.6
+    - Vector1_9FA8D3C1: 0.99
+    - Vector1_AAFAFC9F: 0.1
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -83,6 +93,8 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - Color_BDC0FAE1: {r: 1, g: 1, b: 1, a: 0}
+    - Color_FA90A21F: {r: 0, g: 0, b: 1, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 0.8117647, g: 0.8862745, b: 0.9529412, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
