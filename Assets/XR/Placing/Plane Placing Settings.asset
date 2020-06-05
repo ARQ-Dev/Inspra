@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2b65241ea9fa40f6b73a25b9ad9c3f3, type: 3}
+  m_Name: Plane Placing Settings
+  m_EditorClassIdentifier: 
+  _defaultIndicatorType: 0
+  _defaultPlacingType: 0
+  _defaultPlacementIndicator: {fileID: 3996633819926129268, guid: b3b1c3206e4f24ca888bd091e3bdbba5,
+    type: 3}
+  _defaultHightlightMaterial: {fileID: 0}
+  _startAtEnabling: 0
