@@ -41,6 +41,8 @@ namespace ARQ.AR.Positioning
 
         private Vector3 _screenCenter;
 
+        public Action<GameObject> Instantiated;
+
         #region MonoBehaviour
 
         private void Awake()
@@ -143,12 +145,14 @@ namespace ARQ.AR.Positioning
                         _prefabToInstantiate.transform.position = _placementPose.position;
                         _prefabToInstantiate.transform.rotation = _placementPose.rotation;
                         _prefabToInstantiate.SetActive(true);
+                        Instantiated?.Invoke(_prefabToInstantiate);
                         break;
                     case PlacingType.instantiate:
                         var prefab = Instantiate(_prefabToInstantiate, _placementPose.position, _placementPose.rotation);
                         //prefab.transform.rotation = _placementPose.rotation;
                         prefab.transform.eulerAngles = _placementPose.rotation.eulerAngles;
                         prefab.SetActive(true);
+                        Instantiated?.Invoke(prefab);
                         break;
                 }
             }

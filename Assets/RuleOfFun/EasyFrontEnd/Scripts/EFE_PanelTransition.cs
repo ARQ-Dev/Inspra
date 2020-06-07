@@ -65,7 +65,7 @@ public class EFE_PanelTransition : MonoBehaviour {
 	
 	void Awake () 
 	{
-		
+		efe_base_comp = FindObjectOfType<EFE_Base>();
 		myRect = this.gameObject.GetComponent<RectTransform>();
 		rootCanvasRect = GameObject.Find("EFE_Canvas").GetComponent<RectTransform>();
 
@@ -79,6 +79,7 @@ public class EFE_PanelTransition : MonoBehaviour {
 
 	public void DoTransitionIn()
 	{
+		print(gameObject.name);
 		efe_base_comp.panelIsTransitioning=true;
 		
 		SetEasingType();

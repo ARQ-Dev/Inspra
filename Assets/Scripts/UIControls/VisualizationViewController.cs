@@ -5,6 +5,9 @@ using UnityEngine;
 public class VisualizationViewController : ViewController
 {
     [SerializeField]
+    private VisualizationInstantiator _istantiator;
+
+    [SerializeField]
     private VisualizationView _view;
 
     [SerializeField]
@@ -26,6 +29,7 @@ public class VisualizationViewController : ViewController
 
     private void OnBackTapped()
     {
+        _istantiator.DeleteInstantiatedPrefab();
         Present(_nextViewController);
     }
 
