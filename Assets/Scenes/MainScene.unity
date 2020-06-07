@@ -665,6 +665,7 @@ GameObject:
   - component: {fileID: 735040329}
   - component: {fileID: 735040328}
   - component: {fileID: 735040327}
+  - component: {fileID: 735040332}
   m_Layer: 0
   m_Name: AR Camera
   m_TagString: MainCamera
@@ -800,6 +801,14 @@ Transform:
   m_Father: {fileID: 2077011470}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &735040332
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735040325}
+  m_Enabled: 1
 --- !u!1 &1174283717
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,6 +894,7 @@ GameObject:
   - component: {fileID: 1207345591}
   - component: {fileID: 1207345590}
   - component: {fileID: 1207345589}
+  - component: {fileID: 1207345592}
   m_Layer: 0
   m_Name: AR Session
   m_TagString: Untagged
@@ -932,6 +942,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1207345592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207345588}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29d40dae560a94c38a5623d032c78f9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Goal: 1
+  m_ActivatesAutomatically: 0
 --- !u!224 &1233815190 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1162706670464461727, guid: a500c7baa8437c848b43054b57a3bf89,
@@ -1196,8 +1220,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3733732d0fda241a784a6e7d766810fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _first: {fileID: 7879685699993669613, guid: 5f4405dca213943a5bf83445c237025d, type: 3}
-  _second: {fileID: 70524871873274191, guid: 1f97f6ea70e20c14ab087945a8150e56, type: 3}
+  _first: {fileID: 1670840503591599370, guid: fbf2bd694dbae44318716e31d13ef81a, type: 3}
+  _second: {fileID: 4589247814232522370, guid: 1f97f6ea70e20c14ab087945a8150e56, type: 3}
   _positioner: {fileID: 2077011466}
 --- !u!114 &1804433798 stripped
 MonoBehaviour:
@@ -1328,7 +1352,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2077011465}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.14, z: -3.368}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 735040331}
@@ -1347,8 +1371,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 4428499409959861412, guid: 1d0933dd8d65b43908a2af7ed964736f,
+      objectReference: {fileID: 4428499411479850447}
+    - target: {fileID: 1162706668475616381, guid: a500c7baa8437c848b43054b57a3bf89,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HideSmooth
+      objectReference: {fileID: 0}
     - target: {fileID: 1162706670464461726, guid: a500c7baa8437c848b43054b57a3bf89,
         type: 3}
       propertyPath: m_Name
@@ -1463,8 +1491,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 4428499409959861412, guid: 1d0933dd8d65b43908a2af7ed964736f,
+      objectReference: {fileID: 4428499411479850447}
+    - target: {fileID: 2449488956262987828, guid: a500c7baa8437c848b43054b57a3bf89,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HalfShowSmooth
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a500c7baa8437c848b43054b57a3bf89, type: 3}
 --- !u!114 &4428499409831074328

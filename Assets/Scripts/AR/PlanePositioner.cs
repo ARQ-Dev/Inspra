@@ -39,7 +39,7 @@ namespace ARQ.AR.Positioning
 
         private bool _placingStarted = false;
 
-        private Vector3 _screenCenter;
+        private Vector3 _screenCenter { get { return _camera.ViewportToScreenPoint(new Vector3(0.5f, 0.5f)); } }
 
         public Action<GameObject> Instantiated;
 
@@ -49,7 +49,6 @@ namespace ARQ.AR.Positioning
         {
             _reycastManager = GetComponent<ARRaycastManager>();
             _planeManager = GetComponent<ARPlaneManager>();
-            _screenCenter = _camera.ViewportToScreenPoint(new Vector3(0.5f, 0.5f));
 
         }
 
