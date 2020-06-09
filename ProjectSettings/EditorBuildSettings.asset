@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainScene.unity
     guid: 675ac2b731b5c4898908c0e11cb47df2
+  - enabled: 1
+    path: Assets/Scenes/TimerTest/TimerTest.unity
+    guid: ecfb0637747294f6aaa2a70b3b668898
   m_configObjects: {}

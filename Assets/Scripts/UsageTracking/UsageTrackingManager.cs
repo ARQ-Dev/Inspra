@@ -5,6 +5,9 @@ using UnityEngine;
 public class UsageTrackingManager : Singleton<UsageTrackingManager>
 {
 
+    [SerializeField]
+    private TimeCounter _counter;
+
     #region MonoBehaviour
 
     private void OnApplicationPause(bool pause)
