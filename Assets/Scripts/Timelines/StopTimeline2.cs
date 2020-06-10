@@ -54,14 +54,14 @@ public class StopTimeline2 : MonoBehaviour
 
     public void ReturnInspra()
     {
-        director.time = 90;
+        director.time = 82;
         director.playableGraph.GetRootPlayable(0).SetSpeed(1);
 
     }
 
     public void Reasons()
     {
-        director.time = 66;
+        director.time = 61;
         director.playableGraph.GetRootPlayable(0).SetSpeed(1);
     }
 }
