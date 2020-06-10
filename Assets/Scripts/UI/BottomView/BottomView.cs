@@ -9,6 +9,8 @@ namespace ARQ.UIKit
     public class BottomView : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
     {
         [SerializeField]
+        private int _viewID;
+        [SerializeField]
         private RectTransform _rootRectTransform;
         [SerializeField]
         private Vector2 _shownPosition;
@@ -17,10 +19,14 @@ namespace ARQ.UIKit
         [SerializeField]
         private Vector2 _hidenPosition;
         [SerializeField]
+        private bool _useHalfPosition = true;
+        [SerializeField]
         private Button[] _relatedButtons;
 
         private RectTransform _rectTransform;
         private Vector2 _localPoint = new Vector2();
+
+        public int ViewID { get => _viewID; }
 
         public event Action OnHalfShowSmooth = delegate { };
         public event Action OnExpandSmooth = delegate { };
@@ -38,8 +44,11 @@ namespace ARQ.UIKit
 
         public void HalfShowSmooth()
         {
-            _rectTransform.DOAnchorPos(_shownPosition, 0.3f).SetEase(Ease.InOutCubic);
-            OnHalfShowSmooth();
+            if (_useHalfPosition)
+            {
+                _rectTransform.DOAnchorPos(_shownPosition, 0.3f).SetEase(Ease.InOutCubic);
+                OnHalfShowSmooth();
+            }
         }
 
         public void ExpandSmooth()
@@ -59,8 +68,11 @@ namespace ARQ.UIKit
 
         public void HalfShow()
         {
-            _rectTransform.anchoredPosition = _shownPosition;
-            OnHalfShow();
+            if (_useHalfPosition)
+            {
+                _rectTransform.anchoredPosition = _shownPosition;
+                OnHalfShow();
+            }
         }
 
         public void Hide()
@@ -76,7 +88,10 @@ namespace ARQ.UIKit
 
         public void OnDrag(PointerEventData eventData)
         {
-
+            if(!_useHalfPosition && eventData.delta.y > 0)
+            {
+                return;
+            }
             RectTransformUtility.ScreenPointToLocalPointInRectangle(_rootRectTransform,
                                                                     eventData.delta,
                                                                     null,
@@ -102,7 +117,10 @@ namespace ARQ.UIKit
             }
             else
             {
-                HalfShowSmooth();
+                if (_useHalfPosition)
+                {
+                    HalfShowSmooth();
+                }
             }
         }
     }

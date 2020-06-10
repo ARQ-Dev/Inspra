@@ -607,6 +607,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7967601063007301220}
   - component: {fileID: 1007219606847077981}
+  - component: {fileID: 4583477484102242592}
   m_Layer: 0
   m_Name: Reasons (2)
   m_TagString: Untagged
@@ -656,6 +657,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 4583477484102242592}
+        m_MethodName: InvokeExpandSmooth
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4583477484102242592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181953956725959353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 796fdd13513c1174da2e069795ae837c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _assotiatedViewID: 14
 --- !u!1 &1433825885573486480
 GameObject:
   m_ObjectHideFlags: 0
@@ -7337,6 +7362,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: InvokeExpandSmooth
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3445209807745837198
 GameObject:
   m_ObjectHideFlags: 0
@@ -7682,6 +7718,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3445209809314427900}
         m_MethodName: Reasons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: InvokeExpandSmooth
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14373,6 +14420,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3445209809144816922}
   - component: {fileID: 3401719574656075268}
+  - component: {fileID: 1931471800475072826}
   m_Layer: 0
   m_Name: Risk
   m_TagString: Untagged
@@ -14422,6 +14470,30 @@ MonoBehaviour:
           m_StringArgument: AppearingRisk
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1931471800475072826}
+        m_MethodName: InvokeExpandSmooth
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1931471800475072826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3445209809144816923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 796fdd13513c1174da2e069795ae837c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _assotiatedViewID: 15
 --- !u!1 &3445209809148442827
 GameObject:
   m_ObjectHideFlags: 0
@@ -14432,6 +14504,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3445209809148442826}
   - component: {fileID: 3401719575371058792}
+  - component: {fileID: 2192175580534962957}
   m_Layer: 0
   m_Name: GeneralDeaths
   m_TagString: Untagged
@@ -14481,6 +14554,30 @@ MonoBehaviour:
           m_StringArgument: AppearingGD
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2192175580534962957}
+        m_MethodName: InvokeExpandSmooth
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2192175580534962957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3445209809148442827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 796fdd13513c1174da2e069795ae837c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _assotiatedViewID: 16
 --- !u!1 &3445209809249798698
 GameObject:
   m_ObjectHideFlags: 0
@@ -15170,6 +15267,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3445209809515471001}
   - component: {fileID: 3401719574247007493}
+  - component: {fileID: 423478472696807053}
   m_Layer: 0
   m_Name: Benefits
   m_TagString: Untagged
@@ -15219,6 +15317,30 @@ MonoBehaviour:
           m_StringArgument: AppearingBenefits
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 423478472696807053}
+        m_MethodName: InvokeExpandSmooth
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &423478472696807053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3445209809515471002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 796fdd13513c1174da2e069795ae837c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _assotiatedViewID: 17
 --- !u!1 &3445209809520826316
 GameObject:
   m_ObjectHideFlags: 0
@@ -19076,6 +19198,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5210450355045552995}
   - component: {fileID: 9021566925532901852}
+  - component: {fileID: 6477724493241911830}
   m_Layer: 0
   m_Name: Reasons (1)
   m_TagString: Untagged
@@ -19125,6 +19248,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6477724493241911830}
+        m_MethodName: InvokeExpandSmooth
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6477724493241911830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7964181356011395212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 796fdd13513c1174da2e069795ae837c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _assotiatedViewID: 13
 --- !u!1 &7979483807929591800
 GameObject:
   m_ObjectHideFlags: 0
@@ -19878,6 +20025,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4147530489277674616}
   - component: {fileID: 1163283003218437826}
+  - component: {fileID: 6501270676565441460}
   m_Layer: 0
   m_Name: Snizhenie (1)
   m_TagString: Untagged
@@ -19927,6 +20075,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6501270676565441460}
+        m_MethodName: InvokeExpandSmooth
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6501270676565441460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8744080007369367881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 796fdd13513c1174da2e069795ae837c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _assotiatedViewID: 12
 --- !u!1 &8873408062515760260
 GameObject:
   m_ObjectHideFlags: 0
