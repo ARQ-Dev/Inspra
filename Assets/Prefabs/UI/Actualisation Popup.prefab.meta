@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Prefabs/UI/Actualisation Popup.prefab.meta
 guid: eefe0c497b5ec7b4fbaec2760ae76802
+=======
+guid: 3d6554dcd0976cd469d0273e8558d222
+>>>>>>> develop:Assets/InspraAssets/Prefabs/MaleHeart.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 
