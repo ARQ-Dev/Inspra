@@ -8,6 +8,9 @@ public class VisualizationViewController : ViewController
     private VisualizationInstantiator _istantiator;
 
     [SerializeField]
+    private TimelineController _timelineController;
+
+    [SerializeField]
     private VisualizationView _view;
 
     [SerializeField]
@@ -18,11 +21,19 @@ public class VisualizationViewController : ViewController
     private void OnEnable()
     {
         _view.CloseTapped += OnBackTapped;
+        _view.PauseTapped += OnPauseTapped;
+        _view.UnPauseTapped += OnUnPauseTapped;
+
+        _istantiator.Instantiaded += OnInstantiated;
     }
 
     private void OnDisable()
     {
         _view.CloseTapped -= OnBackTapped;
+        _view.PauseTapped -= OnPauseTapped;
+        _view.UnPauseTapped -= OnUnPauseTapped;
+
+        _istantiator.Instantiaded -= OnInstantiated;
     }
 
     #endregion
@@ -34,5 +45,19 @@ public class VisualizationViewController : ViewController
     }
 
 
+    private void OnPauseTapped()
+    {
+        _timelineController.Pause();
+    }
+
+    private void OnUnPauseTapped()
+    {
+        _timelineController.UnPause();
+    }
+
+    private void OnInstantiated()
+    {
+        _timelineController.FindTimelineController();
+    }
 
 }

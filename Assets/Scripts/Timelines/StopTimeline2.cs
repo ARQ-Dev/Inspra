@@ -22,6 +22,11 @@ public class StopTimeline2 : MonoBehaviour
         director.playableGraph.GetRootPlayable(0).SetSpeed(1);
     }
 
+    public void Pause()
+    {
+        director.playableGraph.GetRootPlayable(0).SetSpeed(0);
+    }
+
     public void AppearingMessage()
     {
         Canv.Play("AppearingMessage");

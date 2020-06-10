@@ -673,7 +673,7 @@ GameObject:
   - component: {fileID: 1050011307657892837}
   - component: {fileID: 1050011307657892835}
   - component: {fileID: 1050011307657892836}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Solve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -768,7 +768,7 @@ GameObject:
   - component: {fileID: 1050011308037056840}
   - component: {fileID: 1050011308037056838}
   - component: {fileID: 1050011308037056841}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -872,7 +872,7 @@ GameObject:
   - component: {fileID: 1050011308234500957}
   - component: {fileID: 1050011308234500956}
   - component: {fileID: 8405591715301125047}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SolveProblem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2067,7 +2067,7 @@ GameObject:
   - component: {fileID: 564270503455659000}
   - component: {fileID: 4711641063663005611}
   - component: {fileID: 7047292053666333622}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Applying
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3311,7 +3311,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &949219697332813531
 Transform:
   m_ObjectHideFlags: 0
@@ -7115,7 +7115,7 @@ GameObject:
   - component: {fileID: 8405591713774127886}
   - component: {fileID: 8405591713774127881}
   - component: {fileID: 8405591713774127880}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7428,7 +7428,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8405591714051808096}
   - component: {fileID: 8405591714051808097}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Beta blocker therapy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8011,7 +8011,7 @@ GameObject:
   - component: {fileID: 8405591714342651951}
   - component: {fileID: 8405591714342651950}
   - component: {fileID: 8405591714342651945}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8115,7 +8115,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8405591714463404445}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Solving
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8526,7 +8526,7 @@ GameObject:
   - component: {fileID: 8405591714671832203}
   - component: {fileID: 8405591714671832206}
   - component: {fileID: 8405591714671832201}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8712,7 +8712,7 @@ GameObject:
   - component: {fileID: 8405591714732455675}
   - component: {fileID: 8405591714732455678}
   - component: {fileID: 8405591714732455673}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9002,7 +9002,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8405591714842581461}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ExtraPlashki
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9035,7 +9035,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8405591714889870628}
   - component: {fileID: 8405591714889870629}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Inhibitor therapy
   m_TagString: Untagged
   m_Icon: {fileID: 0}

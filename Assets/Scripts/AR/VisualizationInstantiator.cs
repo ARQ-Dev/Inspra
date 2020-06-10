@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using ARQ.AR.Positioning;
+using System;
 
 public class VisualizationInstantiator : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class VisualizationInstantiator : MonoBehaviour
     private PlanePositioner _positioner;
 
     private GameObject _istantiatedPrefab;
+
+    public event Action Instantiaded;
 
 
     #region MonoEhaviour
@@ -65,6 +68,7 @@ public class VisualizationInstantiator : MonoBehaviour
     {
         if (_istantiatedPrefab != null) Destroy(_istantiatedPrefab);
         _istantiatedPrefab = go;
+        Instantiaded?.Invoke();
     }
 
 }
