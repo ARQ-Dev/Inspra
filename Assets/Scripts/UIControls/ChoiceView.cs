@@ -14,11 +14,13 @@ public class ChoiceView : MonoBehaviour
     public void First()
     {
         FirstSelected?.Invoke();
+        UsageTrackingManager.Instance.AddFirstVisCount();
     }
 
     public void Second()
     {
         SecondSelected?.Invoke();
+        UsageTrackingManager.Instance.AddSecondVisCount();
     }
 
     public void LogOut()

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class VisualizationViewController : ViewController
 {
@@ -24,7 +25,9 @@ public class VisualizationViewController : ViewController
         _view.PauseTapped += OnPauseTapped;
         _view.UnPauseTapped += OnUnPauseTapped;
 
-        _istantiator.Instantiaded += OnInstantiated;
+        var director = FindObjectOfType<PlayableDirector>();
+
+        _timelineController.Director = director;
     }
 
     private void OnDisable()
@@ -32,8 +35,6 @@ public class VisualizationViewController : ViewController
         _view.CloseTapped -= OnBackTapped;
         _view.PauseTapped -= OnPauseTapped;
         _view.UnPauseTapped -= OnUnPauseTapped;
-
-        _istantiator.Instantiaded -= OnInstantiated;
     }
 
     #endregion
@@ -55,9 +56,5 @@ public class VisualizationViewController : ViewController
         _timelineController.UnPause();
     }
 
-    private void OnInstantiated()
-    {
-        _timelineController.FindTimelineController();
-    }
 
 }

@@ -17,7 +17,7 @@ public class VisualizationInstantiator : MonoBehaviour
 
     private GameObject _istantiatedPrefab;
 
-    public event Action Instantiaded;
+    public event Action<GameObject> Instantiaded;
 
 
     #region MonoEhaviour
@@ -41,6 +41,7 @@ public class VisualizationInstantiator : MonoBehaviour
 
 #if UNITY_EDITOR
         _istantiatedPrefab = Instantiate(_first, Vector3.zero, Quaternion.identity);
+        Instantiaded?.Invoke(_istantiatedPrefab);
 #else
         _positioner.StartPositioning(_first);
 #endif
@@ -51,6 +52,7 @@ public class VisualizationInstantiator : MonoBehaviour
     {
 #if UNITY_EDITOR
         _istantiatedPrefab = Instantiate(_second, Vector3.zero, Quaternion.identity);
+        Instantiaded?.Invoke(_istantiatedPrefab);
 #else
         _positioner.StartPositioning(_second);
 #endif
@@ -68,7 +70,7 @@ public class VisualizationInstantiator : MonoBehaviour
     {
         if (_istantiatedPrefab != null) Destroy(_istantiatedPrefab);
         _istantiatedPrefab = go;
-        Instantiaded?.Invoke();
+        Instantiaded?.Invoke(_istantiatedPrefab);
     }
 
 }
