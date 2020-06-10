@@ -332,6 +332,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Male for timeline
       objectReference: {fileID: 0}
+    - target: {fileID: 6020869848687279100, guid: 3eb7e976492c5459fa2c31db2913d517,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7337829316732619247, guid: 3eb7e976492c5459fa2c31db2913d517,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -455,6 +460,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SecondTimeline
+      objectReference: {fileID: 0}
+    - target: {fileID: 3445209808049614132, guid: 653099d1ddd0a3d4cbbac2e65c047574,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 653099d1ddd0a3d4cbbac2e65c047574, type: 3}
