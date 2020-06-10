@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18047316, g: 0.22594164, b: 0.3070302, a: 1}
+  m_IndirectSpecularColor: {r: 0.18047348, g: 0.225942, b: 0.30703077, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -331,11 +331,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Male for timeline
-      objectReference: {fileID: 0}
-    - target: {fileID: 6020869848687279100, guid: 3eb7e976492c5459fa2c31db2913d517,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7337829316732619247, guid: 3eb7e976492c5459fa2c31db2913d517,
         type: 3}
