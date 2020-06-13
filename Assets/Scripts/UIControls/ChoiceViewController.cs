@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class ChoiceViewController : ViewController
 {
@@ -16,6 +17,7 @@ public class ChoiceViewController : ViewController
     [SerializeField]
     private ViewController _loginVC;
 
+    public event Action LogOut;
 
     #region MonoBehaviour
 
@@ -50,7 +52,7 @@ public class ChoiceViewController : ViewController
 
     private void OnLogoutTapped()
     {
-        UserManager.Instance.DeleteUserData();
+        LogOut?.Invoke();
         Present(_loginVC);
     }
 

@@ -17,6 +17,12 @@ public class VisualizationViewController : ViewController
     [SerializeField]
     private ViewController _nextViewController;
 
+    [SerializeField]
+    private UsageTrackingManager _usageTrackingManager;
+
+    [SerializeField]
+    private Timer _timer;
+
     #region MonoBehaviour
 
     private void OnEnable()
@@ -43,17 +49,20 @@ public class VisualizationViewController : ViewController
     {
         _istantiator.DeleteInstantiatedPrefab();
         Present(_nextViewController);
+        _usageTrackingManager.SessionEnded();
     }
 
 
     private void OnPauseTapped()
     {
         _timelineController.Pause();
+        _timer.PauseTimer();
     }
 
     private void OnUnPauseTapped()
     {
         _timelineController.UnPause();
+        _timer.UnpauseTimer();
     }
 
 

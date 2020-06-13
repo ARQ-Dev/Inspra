@@ -7,11 +7,19 @@ public class TimeCounter : MonoBehaviour
 {
     public DateTime? StartTime { get; private set; } = null;
 
+    public double WorkingTime
+    {
+        get
+        {
+            return (DateTime.Now - (StartTime ?? DateTime.Now)).TotalSeconds;
+        }
+    }
+
     public double ForgroundTime
     {
         get
         {
-            return (DateTime.Now - (StartTime ?? DateTime.Now)).TotalSeconds - BackgroundTime;
+            return WorkingTime - BackgroundTime;
         }
     }
 
@@ -55,5 +63,4 @@ public class TimeCounter : MonoBehaviour
     }
 
     #endregion
-
 }

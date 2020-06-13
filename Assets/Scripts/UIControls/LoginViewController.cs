@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
 public class LoginViewController : ViewController
 {
     [SerializeField]
@@ -9,6 +9,8 @@ public class LoginViewController : ViewController
 
     [SerializeField]
     private ViewController _nextViewController;
+
+    public event Action<string, string> Login;
 
     #region MonoBehaviour
 
@@ -32,18 +34,18 @@ public class LoginViewController : ViewController
 
     private void OnLogin(string username, string password)
     {
-        if (username == "admin" &&
-            password == "admin")
-        {
-           UserManager.Instance.WriteUserData(username, password);
-            _view.SendResponse(true);
-            Present(_nextViewController);
-        }
-        else
-        {
-            _view.SendResponse(false);
-        }
+        Login?.Invoke(username, password);
+    }
 
+    public void SeccesfuleLogin()
+    {
+        _view.SendResponse(true);
+        Present(_nextViewController);
+    }
+
+    public void FailedLogin()
+    {
+        _view.SendResponse(false);
     }
 
 }

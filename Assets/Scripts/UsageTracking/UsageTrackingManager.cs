@@ -1,96 +1,146 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Playables;
+﻿using UnityEngine;
 using System.IO;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Bson;
+
 
 
 public class UsageTrackingManager : Singleton<UsageTrackingManager>
 {
-    const string TRACKING_DATA_FILENAME = "usagetrackingdata";
+    #region SerializedFields
 
-    private TrackingData _trackingData;
+    [SerializeField]
+    private VisualizationInstantiator _instantiator;
 
     [SerializeField]
     private TimeCounter _counter;
 
+    [SerializeField]
+    private Timer _timer;
+
+    private ReportsContainer _reportContainer;
+
+    #endregion
+
+    const string REPORT_CONTAINER_FILENAME = "report-cantainer";
+
+    private TrackingData _currentSessionData;
+
+    public double AcceptableBackgroundTime { get; set; } = 30;
+
+    private bool _isSessionInProgress = false;
+
     #region MonoBehaviour
 
-    #endregion
-
-    #region Methods
-
-    public void SendTrackingData()
+    private void Start()
     {
+        GrabReports();
 
-    }
-
-    public void AddOpeningsCount()
-    {
-        _trackingData.OpeningsCount++;
-    }
-
-    public void AddFirstVisCount()
-    {
-        _trackingData.FirstVisOpeningsCount++;
-    }
-
-    public void AddSecondVisCount()
-    {
-        _trackingData.SecondVisOpeningsCount++;
-    }
-
-    public void AddFirstVisDepth(int index)
-    {
-        if (index > _trackingData.FirstVisDepth.Count)
-            return;
-        _trackingData.FirstVisDepth[index]++;
-    }
-
-    public void AddSecondVisDepth(int index)
-    {
-        if (index > _trackingData.SecondVisDepth.Count)
-            return;
-        _trackingData.SecondVisDepth[index]++;
-    }
-
-    public void InitializeTrackingManager()
-    {
-        var isReaded = ReadUserData();
-        if (!isReaded)
-            _trackingData = new TrackingData();
-    }
-
-    #endregion
-
-    private bool ReadUserData()
-    {
-        var path = Path.Combine(Application.persistentDataPath, TRACKING_DATA_FILENAME);
-
-        if (!File.Exists(path)) return false;
-
-        var bytes = File.ReadAllBytes(path);
-
-        if (bytes == null) return false;
-
-        MemoryStream ms = new MemoryStream(bytes);
-        using (BsonReader reader = new BsonReader(ms))
+        if (_reportContainer.data.Count > 0)
         {
-            JsonSerializer serializer = new JsonSerializer();
-            _trackingData = serializer.Deserialize<TrackingData>(reader);
+            var reportJson = JsonConvert.SerializeObject(_reportContainer);
+            NetworkManager.Instance.SendReport(reportJson,
+                (e, n) =>
+                {
+                },
+                () =>
+                {
+                    DropContainer();
+                });
         }
-
-        return _trackingData != null;
     }
 
-    private void DeleteTrackingData()
+    private void OnEnable()
     {
-        _trackingData = new TrackingData();
-        var path = Path.Combine(Application.persistentDataPath, TRACKING_DATA_FILENAME);
-        File.Delete(path);
-    }        
+        _instantiator.Instantiaded += OnVisualizationInstantiated;
+    }
 
+    private void OnDisable()
+    {
+        _instantiator.Instantiaded -= OnVisualizationInstantiated;
+    }
 
+    private void OnApplicationFocus(bool focus)
+    {
+        if (focus)
+        {
+            if (_counter.SinceLastBackgroundTime > AcceptableBackgroundTime)
+            {
+                SessionEnded();
+            }
+        }
+    }
+
+    private void OnApplicationQuit()
+    {
+        SessionEnded();
+    }
+
+    #endregion
+
+    private void OnVisualizationInstantiated(GameObject go)
+    {
+        var visualization = go.GetComponent<Visualization>();
+
+        if (visualization != null)
+            SessionStarted(visualization.Number);
+
+    }
+
+    private void SessionStarted(int number)
+    {
+        _currentSessionData = new TrackingData();
+        _currentSessionData.VisualizationNumber = number;
+        
+        _timer.StartTimer();
+        _isSessionInProgress = true; 
+    }
+
+    public void SessionEnded()
+    {
+        if (!_isSessionInProgress) return;
+        Timer.TimerReport report = _timer.StopTimer();
+        _currentSessionData.Duration = (int)report.WorkingTime;
+        _currentSessionData.PauseIgnoreDuration = (int)report.WorkingTimeWithoutPause;
+        _currentSessionData.SesseionStartTime = report.StartTime;
+
+        _reportContainer.data.Add(_currentSessionData);
+        var reportJson = JsonConvert.SerializeObject(_reportContainer);
+        NetworkManager.Instance.SendReport(reportJson,
+            (e, n) =>
+            {
+                print($"Error number: {n} " +
+                    $"Error msg: {e}");
+                var path = Path.Combine(Application.persistentDataPath, REPORT_CONTAINER_FILENAME);
+                BsonDataManager.WriteData(path, _reportContainer);
+            },
+            () =>
+            {
+                print(reportJson);
+                DropContainer();
+            });
+
+        _isSessionInProgress = false;
+    }
+    private void GrabReports()
+    {
+        var path = Path.Combine(Application.persistentDataPath, REPORT_CONTAINER_FILENAME);
+
+        if (File.Exists(path))
+        {
+            var container = BsonDataManager.ReadData<ReportsContainer>(path);
+            _reportContainer = container == null ? new ReportsContainer() : container;
+        }
+        else
+        {
+            _reportContainer = new ReportsContainer();
+        }
+    }
+
+    private void DropContainer()
+    {
+        var path = Path.Combine(Application.persistentDataPath, REPORT_CONTAINER_FILENAME);
+        BsonDataManager.DeleteData(path);
+
+        _reportContainer = new ReportsContainer();
+    }
 }
