@@ -9,7 +9,6 @@ public class Mover : MonoBehaviour
 
     [SerializeField]
     PlayableDirector _director;
-    
 
     private void Start()
     {
@@ -26,10 +25,14 @@ public class Mover : MonoBehaviour
                 if(timing > (int)dirTime)
                 {
                     _director.time = timing;
-                    if(timing!=52)
+                    if (timing != 52)
+                    {
                         _director.playableGraph.GetRootPlayable(0).SetSpeed(1);
+                    }
                     else
+                    {
                         _director.playableGraph.GetRootPlayable(0).SetSpeed(0);
+                    }
                     break;
                 }
             }
@@ -47,9 +50,13 @@ public class Mover : MonoBehaviour
             {
                 _director.time = timing;
                 if (timing != 52)
+                {
                     _director.playableGraph.GetRootPlayable(0).SetSpeed(1);
+                }
                 else
+                {
                     _director.playableGraph.GetRootPlayable(0).SetSpeed(0);
+                }
                 break;
             }
         }

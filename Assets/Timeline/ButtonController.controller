@@ -67,6 +67,9 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: -4598956065807995824}
     m_Position: {x: 190, y: 400, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 4075207710286923433}
+    m_Position: {x: 225, y: 465, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: -8662886669781350141}
@@ -393,6 +396,32 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 08c297b6e729e7041b30e6e9875cae28, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+--- !u!1102 &4075207710286923433
+AnimatorState:
+  serializedVersion: 5
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SwitchSolveButton
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 61f582ae5e4dd6d4f802829e35750342, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

@@ -10,8 +10,11 @@ public class stopTimeline : MonoBehaviour
     public Animator Level;
     public Animator Solve;
     public AudioSource audioSource;
+    public static bool _firstTimeLineWasPaused = false;
+    
     void OnEnable()
     {
+        _firstTimeLineWasPaused = true;
         director.playableGraph.GetRootPlayable(0).SetSpeed(0);
         Male.Play("MaleFlash");
         Level.Play("IndicatorFlash");
@@ -20,8 +23,9 @@ public class stopTimeline : MonoBehaviour
 
     public void UnPause()
     {
+        _firstTimeLineWasPaused = false;
         director.playableGraph.GetRootPlayable(0).SetSpeed(1);
-        Solve.Play("OneBigAnim");
+        Solve.Play("SwitchSolveButton");
     }
 
     public void Pause()
