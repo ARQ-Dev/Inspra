@@ -7,8 +7,10 @@ public class StopTimeline2 : MonoBehaviour
 {
     public PlayableDirector director;
     public Animator Models;
+    public static bool _secondTimeLineWasPaused = false;
     void OnEnable()
     {
+        _secondTimeLineWasPaused = true;
         director.playableGraph.GetRootPlayable(0).SetSpeed(0);
         if (Models.isActiveAndEnabled)
         {
@@ -18,6 +20,7 @@ public class StopTimeline2 : MonoBehaviour
 
     public void UnPause()
     {
+        _secondTimeLineWasPaused = false;
         director.playableGraph.GetRootPlayable(0).SetSpeed(1);
     }
 

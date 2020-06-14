@@ -17,8 +17,7 @@ public class TimelineController : MonoBehaviour
     public void UnPause()
     {
         if (!Director) return;
-        Debug.Log(stopTimeline._firstTimeLineWasPaused);
-        if(!stopTimeline._firstTimeLineWasPaused) Director.playableGraph.GetRootPlayable(0).SetSpeed(1);
+        if(!(stopTimeline._firstTimeLineWasPaused ||StopTimeline2._secondTimeLineWasPaused)) Director.playableGraph.GetRootPlayable(0).SetSpeed(1);
     }
 
 }

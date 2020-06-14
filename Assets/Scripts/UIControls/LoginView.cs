@@ -12,6 +12,9 @@ public class LoginView : ViewController
     [SerializeField]
     private InputField _passwordField;
 
+    [SerializeField]
+    private SlidingText _slidingText;
+
     public event Action<string, string> LoginTapped;
 
     #region Methods
@@ -28,7 +31,10 @@ public class LoginView : ViewController
 
     public void SendResponse(bool isDataCorrect)
     {
-
+        if (!isDataCorrect)
+        {
+            _slidingText.Show();
+        }
     }
 
     private void Clean()

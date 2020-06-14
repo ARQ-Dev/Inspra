@@ -110,6 +110,7 @@ MonoBehaviour:
   _shownPosition: {x: 0, y: 500}
   _expandedPosition: {x: 0, y: 500}
   _hidenPosition: {x: 0, y: 0}
+  _useHalfPosition: 1
   _relatedButtons: []
 --- !u!1 &464527002058019313
 GameObject:
@@ -346,7 +347,7 @@ RectTransform:
   m_GameObject: {fileID: 1044900080671809050}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.88868, y: 0.88868, z: 0.88868}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 324478185402622746}
   m_Father: {fileID: 464527001299403016}
