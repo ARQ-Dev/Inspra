@@ -22,6 +22,15 @@ public class VisualizationViewController : ViewController
     private UsageTrackingManager _usageTrackingManager;
 
     [SerializeField]
+    private PlaneDetectionStateReporter _planeStateReporter;
+
+    [SerializeField]
+    private ARPlaneManager _planeManager;
+
+    [SerializeField]
+    private ARSession _session;
+
+    [SerializeField]
     private Timer _timer;
 
 
@@ -33,8 +42,13 @@ public class VisualizationViewController : ViewController
         _view.PauseTapped += OnPauseTapped;
         _view.UnPauseTapped += OnUnPauseTapped;
 
+        _planeStateReporter.PlaneDetected += OnPlaneDetected;
+
         var director = FindObjectOfType<PlayableDirector>();
 
+        _session.Reset();
+
+        _planeManager.enabled = true;
         _timelineController.Director = director;
 
     }
@@ -44,6 +58,9 @@ public class VisualizationViewController : ViewController
         _view.CloseTapped -= OnBackTapped;
         _view.PauseTapped -= OnPauseTapped;
         _view.UnPauseTapped -= OnUnPauseTapped;
+
+        _planeManager.enabled = false;
+        _planeStateReporter.PlaneDetected -= OnPlaneDetected;
 
     }
 
@@ -55,6 +72,7 @@ public class VisualizationViewController : ViewController
         Present(_nextViewController);
         _usageTrackingManager.SessionEnded();
 
+        _planeManager.enabled = false;
     }
 
 
@@ -71,8 +89,8 @@ public class VisualizationViewController : ViewController
         _timer.UnpauseTimer();
     }
 
-    protected override void OnPresended()
+    private void OnPlaneDetected(bool isPlaneDetected)
     {
-
+        _view.PlaneDetected(isPlaneDetected);
     }
 }

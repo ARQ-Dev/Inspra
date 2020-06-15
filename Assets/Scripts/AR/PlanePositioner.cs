@@ -29,7 +29,7 @@ namespace ARQ.AR.Positioning
 
         private ARPlaneManager _planeManager;
 
-        private List<Pose> _previousPositions = new List<Pose>();
+        //private List<Pose> _previousPositions = new List<Pose>();
 
         private Pose _placementPose;
 
@@ -202,13 +202,14 @@ namespace ARQ.AR.Positioning
             _reycastManager.Raycast(_screenCenter, hits, TrackableType.PlaneWithinPolygon | TrackableType.FeaturePoint);
             _positionIsValid = hits.Count > 0;
             if (!_positionIsValid) return;
-            _previousPositions.Add(hits[0].pose);
-            if (_previousPositions.Count > 10) _previousPositions.RemoveRange(0, _previousPositions.Count - 10);
-            foreach (Pose pose in _previousPositions)
-            {
-                _placementPose.position += pose.position;
-            }
-            _placementPose.position *= 0.1f;
+            //_previousPositions.Add(hits[0].pose);
+            //if (_previousPositions.Count > 10) _previousPositions.RemoveRange(0, _previousPositions.Count - 10);
+            //foreach (Pose pose in _previousPositions)
+            //{
+            //    _placementPose.position += pose.position;
+            //}
+            //_placementPose.position *= 0.1f;
+            _placementPose.position = hits[0].pose.position;
         }
 
         private void UpdateIndicatorPose()
