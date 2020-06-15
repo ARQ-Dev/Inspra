@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.XR.ARFoundation;
 
 public class VisualizationViewController : ViewController
 {
@@ -23,6 +24,7 @@ public class VisualizationViewController : ViewController
     [SerializeField]
     private Timer _timer;
 
+
     #region MonoBehaviour
 
     private void OnEnable()
@@ -34,6 +36,7 @@ public class VisualizationViewController : ViewController
         var director = FindObjectOfType<PlayableDirector>();
 
         _timelineController.Director = director;
+
     }
 
     private void OnDisable()
@@ -41,6 +44,7 @@ public class VisualizationViewController : ViewController
         _view.CloseTapped -= OnBackTapped;
         _view.PauseTapped -= OnPauseTapped;
         _view.UnPauseTapped -= OnUnPauseTapped;
+
     }
 
     #endregion
@@ -50,7 +54,9 @@ public class VisualizationViewController : ViewController
         _istantiator.DeleteInstantiatedPrefab();
         Present(_nextViewController);
         _usageTrackingManager.SessionEnded();
+
     }
+
 
 
     private void OnPauseTapped()
@@ -65,5 +71,8 @@ public class VisualizationViewController : ViewController
         _timer.UnpauseTimer();
     }
 
+    protected override void OnPresended()
+    {
 
+    }
 }

@@ -11,6 +11,7 @@ public abstract class ViewController : MonoBehaviour
     public void Open()
     {
         _panelController.OpenPanel(gameObject);
+        OnOpened();
     }
 
     protected void Awake()
@@ -23,7 +24,16 @@ public abstract class ViewController : MonoBehaviour
     protected void Present(ViewController viewController)
     {
         _panelController.OpenPanel(viewController.gameObject);
+        viewController.OnPresended();
     }
 
+    protected virtual void OnPresended()
+    {
+
+    }
+
+    protected virtual void OnOpened()
+    {
+    }
 
 }

@@ -56,6 +56,11 @@ public class ARKitCoachingOverlay : MonoBehaviour
             }
         }
     }
+
+    internal void ActivateCoaching()
+    {
+        throw new NotImplementedException();
+    }
 #endif
 
     [SerializeField]
