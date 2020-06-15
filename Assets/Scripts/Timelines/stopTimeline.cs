@@ -23,15 +23,16 @@ public class stopTimeline : MonoBehaviour
 
     public void UnPause()
     {
-        _firstTimeLineWasPaused = false;
-        director.playableGraph.GetRootPlayable(0).SetSpeed(1);
-        Solve.Play("SwitchSolveButton");
+        if (!director.GetComponent<PauseController>().TimelineWasPaused())
+        {
+            _firstTimeLineWasPaused = false;
+            director.playableGraph.GetRootPlayable(0).SetSpeed(1);
+            Solve.Play("SwitchSolveButton");
+        }
     }
 
     public void Pause()
     {
         director.playableGraph.GetRootPlayable(0).SetSpeed(0);
-
     }
-    
 }
