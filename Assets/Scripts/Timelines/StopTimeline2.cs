@@ -20,8 +20,11 @@ public class StopTimeline2 : MonoBehaviour
 
     public void UnPause()
     {
-        _secondTimeLineWasPaused = false;
-        director.playableGraph.GetRootPlayable(0).SetSpeed(1);
+        if (!director.GetComponent<PauseController>().TimelineWasPaused())
+        {
+            _secondTimeLineWasPaused = false;
+            director.playableGraph.GetRootPlayable(0).SetSpeed(1);
+        }
     }
 
     public void Pause()
