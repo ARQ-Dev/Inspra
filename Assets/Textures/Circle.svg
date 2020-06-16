@@ -1,0 +1,14 @@
+<svg width="1000" height="1000" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="1000" height="1000">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M500 900C720.914 900 900 720.914 900 500C900 279.086 720.914 100 500 100C279.086 100 100 279.086 100 500C100 720.914 279.086 900 500 900ZM500 1000C776.142 1000 1000 776.142 1000 500C1000 223.858 776.142 0 500 0C223.858 0 0 223.858 0 500C0 776.142 223.858 1000 500 1000Z" fill="#3FA3F0"/>
+</mask>
+<g mask="url(#mask0)">
+<rect x="500" y="-50" width="550" height="1100" fill="#32AD28"/>
+</g>
+<mask id="mask1" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="1000" height="1000">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M500 900C720.914 900 900 720.914 900 500C900 279.086 720.914 100 500 100C279.086 100 100 279.086 100 500C100 720.914 279.086 900 500 900ZM500 1000C776.142 1000 1000 776.142 1000 500C1000 223.858 776.142 0 500 0C223.858 0 0 223.858 0 500C0 776.142 223.858 1000 500 1000Z" fill="#3FA3F0"/>
+</mask>
+<g mask="url(#mask1)">
+<rect width="550" height="1100" transform="matrix(-1 0 0 1 500 -50)" fill="#3FA3F0"/>
+</g>
+</svg>
