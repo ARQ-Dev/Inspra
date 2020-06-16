@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18047348, g: 0.225942, b: 0.30703077, a: 1}
+  m_IndirectSpecularColor: {r: 0.44682443, g: 0.49669784, b: 0.57496285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -350,32 +350,32 @@ PrefabInstance:
     - target: {fileID: 1875637765584500551, guid: 3eb7e976492c5459fa2c31db2913d517,
         type: 3}
       propertyPath: m_fontSize
-      value: 22
+      value: 20.55
       objectReference: {fileID: 0}
     - target: {fileID: 1875637765584500551, guid: 3eb7e976492c5459fa2c31db2913d517,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1875637765584500551, guid: 3eb7e976492c5459fa2c31db2913d517,
         type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 16777215
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4963831650410281270, guid: 3eb7e976492c5459fa2c31db2913d517,
         type: 3}
       propertyPath: m_fontSize
-      value: 21.15
+      value: 16.2
       objectReference: {fileID: 0}
     - target: {fileID: 4963831650410281270, guid: 3eb7e976492c5459fa2c31db2913d517,
         type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 822083583
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 5970047674389408320, guid: 3eb7e976492c5459fa2c31db2913d517,
         type: 3}
       propertyPath: m_fontSize
-      value: 22
+      value: 19.95
       objectReference: {fileID: 0}
     - target: {fileID: 5970047674389408320, guid: 3eb7e976492c5459fa2c31db2913d517,
         type: 3}
@@ -465,32 +465,32 @@ PrefabInstance:
     - target: {fileID: 7697983448448941672, guid: 3eb7e976492c5459fa2c31db2913d517,
         type: 3}
       propertyPath: m_fontSize
-      value: 21.6
+      value: 17.25
       objectReference: {fileID: 0}
     - target: {fileID: 7697983448448941672, guid: 3eb7e976492c5459fa2c31db2913d517,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7697983448448941672, guid: 3eb7e976492c5459fa2c31db2913d517,
         type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 1224736767
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8161418106344216886, guid: 3eb7e976492c5459fa2c31db2913d517,
         type: 3}
       propertyPath: m_fontSize
-      value: 21.15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8161418106344216886, guid: 3eb7e976492c5459fa2c31db2913d517,
         type: 3}
       propertyPath: m_firstOverflowCharacterIndex
-      value: -1
+      value: 117
       objectReference: {fileID: 0}
     - target: {fileID: 8161418106344216886, guid: 3eb7e976492c5459fa2c31db2913d517,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8161418106344216886, guid: 3eb7e976492c5459fa2c31db2913d517,
         type: 3}
@@ -505,12 +505,12 @@ PrefabInstance:
     - target: {fileID: 9060931541371816351, guid: 3eb7e976492c5459fa2c31db2913d517,
         type: 3}
       propertyPath: m_fontSize
-      value: 22
+      value: 20.5
       objectReference: {fileID: 0}
     - target: {fileID: 9060931541371816351, guid: 3eb7e976492c5459fa2c31db2913d517,
         type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 83886079
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3eb7e976492c5459fa2c31db2913d517, type: 3}

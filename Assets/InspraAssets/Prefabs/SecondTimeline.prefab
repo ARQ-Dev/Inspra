@@ -314,7 +314,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   director: {fileID: 70524871873274184}
-  Canv: {fileID: 70524872188177900}
   Models: {fileID: 70524870555576339}
 --- !u!1 &70524870581726695
 GameObject:
@@ -4106,6 +4105,14 @@ PlayableDirector:
     value: {fileID: 70524870592311408}
   - key: {fileID: -1399143725850195549, guid: 751741414c7ff6147aa91272df9b744d, type: 2}
     value: {fileID: 70524870592311409}
+  - key: {fileID: -7374552818957349921, guid: 751741414c7ff6147aa91272df9b744d, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -1647868899439813955, guid: 751741414c7ff6147aa91272df9b744d, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -7455171880040984999, guid: 751741414c7ff6147aa91272df9b744d, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -8951878533640652773, guid: 751741414c7ff6147aa91272df9b744d, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &70524871896485485
