@@ -39,23 +39,23 @@ public class VisualizationInstantiator : MonoBehaviour
     public void InstantiateFirst()
     {
 
-//#if UNITY_EDITOR
+#if UNITY_EDITOR
         _istantiatedPrefab = Instantiate(_first, Vector3.zero, Quaternion.identity);
         Instantiaded?.Invoke(_istantiatedPrefab);
-//#else
-//        _positioner.StartPositioning(_first);
-//#endif
+#else
+        _positioner.StartPositioning(_first);
+#endif
 
     }
 
     public void InstantiateSecond()
     {
-//#if UNITY_EDITOR
+#if UNITY_EDITOR
         _istantiatedPrefab = Instantiate(_second, Vector3.zero, Quaternion.identity);
         Instantiaded?.Invoke(_istantiatedPrefab);
-//#else
-//        _positioner.StartPositioning(_second);
-//#endif
+#else
+        _positioner.StartPositioning(_second);
+#endif
     }
 
     public void DeleteInstantiatedPrefab()
