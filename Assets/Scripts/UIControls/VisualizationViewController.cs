@@ -48,6 +48,9 @@ public class VisualizationViewController : ViewController
 
         _session.Reset();
 
+#if !UNITY_EDITOR
+        _view.ActivateUI(false);
+#endif
         _planeManager.enabled = true;
         _timelineController.Director = director;
 
@@ -67,14 +70,13 @@ public class VisualizationViewController : ViewController
 
     }
 
-    #endregion
+#endregion
 
     private void OnBackTapped()
     {
         _istantiator.DeleteInstantiatedPrefab();
-        Present(_nextViewController);
         _usageTrackingManager.SessionEnded();
-
+        Present(_nextViewController);
         _planeManager.enabled = false;
     }
 
@@ -90,10 +92,28 @@ public class VisualizationViewController : ViewController
     {
         _timelineController.UnPause();
         _timer.UnpauseTimer();
+        _view.PresentPopup();
     }
 
     private void OnPlaneDetected(bool isPlaneDetected)
     {
-        _view.PlaneDetected(isPlaneDetected);
+
+#if !UNITY_EDITOR
+
+        if (gameObject.activeInHierarchy)
+            StartCoroutine(PlaneDetected(isPlaneDetected));
+
+#endif
+
     }
+
+    private IEnumerator PlaneDetected(bool isPlaneDetected)
+    {
+        _view.ActivateHint(!isPlaneDetected);
+        yield return null;
+        _view.ActivateUI(isPlaneDetected);
+        yield return new WaitForSeconds(1);
+        _view.PresentPopup();
+    }
+
 }

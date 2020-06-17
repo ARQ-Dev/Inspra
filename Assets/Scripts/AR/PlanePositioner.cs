@@ -73,7 +73,8 @@ namespace ARQ.AR.Positioning
 
             if (_positionIsValid && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
             {
-                PositionObject();
+                if (!EventSystemHelper.IsPointerOverUIObject())
+                    PositionObject();
             }
         }
 

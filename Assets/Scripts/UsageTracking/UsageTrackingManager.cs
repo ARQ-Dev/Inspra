@@ -92,11 +92,15 @@ public class UsageTrackingManager : Singleton<UsageTrackingManager>
         _currentSessionData.VisualizationNumber = number;
         
         _timer.StartTimer();
-        _isSessionInProgress = true; 
+        _isSessionInProgress = true;
+        print($"Session Started");
     }
 
     public void SessionEnded()
     {
+
+        print($"Is session in progress: {_isSessionInProgress}");
+
         if (!_isSessionInProgress) return;
         Timer.TimerReport report = _timer.StopTimer();
         _currentSessionData.Duration = (int)report.WorkingTime;
@@ -118,7 +122,7 @@ public class UsageTrackingManager : Singleton<UsageTrackingManager>
                 print(reportJson);
                 DropContainer();
             });
-
+        print($"Session Ended");
         _isSessionInProgress = false;
     }
     private void GrabReports()
