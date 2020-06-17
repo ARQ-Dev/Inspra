@@ -9,6 +9,7 @@ public class stopTimeline : MonoBehaviour
     public Animator Male;
     public Animator Level;
     public Animator Solve;
+    public Animator testAnimator;
     public AudioSource audioSource;
     public static bool _firstTimeLineWasPaused = false;
     
@@ -19,6 +20,7 @@ public class stopTimeline : MonoBehaviour
         Male.Play("MaleFlash");
         Level.Play("IndicatorFlash");
         Solve.Play("SolveProblemAppearing");
+        
     }
 
     public void UnPause()

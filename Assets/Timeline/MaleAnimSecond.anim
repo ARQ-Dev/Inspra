@@ -498,16 +498,16 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 11
-        value: -370
-        inSlope: 0
-        outSlope: 0
+        value: -1.15
+        inSlope: 0.06153941
+        outSlope: 0.06153941
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 13
-        value: 370
+        value: -0.95
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -535,16 +535,16 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 11
-        value: -370
-        inSlope: 0
-        outSlope: 0
+        value: -1.1
+        inSlope: 0.046146516
+        outSlope: 0.046146516
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 13
-        value: 370
+        value: -0.95
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -572,16 +572,16 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 11
-        value: -370
-        inSlope: 0
-        outSlope: 0
+        value: -1.15
+        inSlope: 0.06153941
+        outSlope: 0.06153941
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 13
-        value: 370
+        value: -0.95
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -609,16 +609,16 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 11
-        value: -370
-        inSlope: 0
-        outSlope: 0
+        value: -1.1
+        inSlope: 0.046146516
+        outSlope: 0.046146516
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 13
-        value: 370
+        value: -0.95
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -646,16 +646,16 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 11
-        value: -370
-        inSlope: 0
-        outSlope: 0
+        value: -1.15
+        inSlope: 0.06153941
+        outSlope: 0.06153941
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 13
-        value: 370
+        value: -0.95
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -683,16 +683,16 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 11
-        value: -370
-        inSlope: 0
-        outSlope: 0
+        value: -1.1
+        inSlope: 0.033839706
+        outSlope: 0.033839706
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 13
-        value: 370
+        value: -0.99
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -720,16 +720,16 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 11
-        value: -370
-        inSlope: 0
-        outSlope: 0
+        value: -1.15
+        inSlope: 0.06153941
+        outSlope: 0.06153941
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 13
-        value: 370
+        value: -0.95
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -741,6 +741,80 @@ AnimationClip:
       m_RotationOrder: 4
     attribute: material.Vector1_74CF4840
     path: MaleHeart/MaleHeartVeins
+    classID: 137
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -1.4
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 11
+        value: -1.15
+        inSlope: 0.034615383
+        outSlope: 0.034615383
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 13
+        value: -0.95
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material.Vector1_74CF4840
+    path: MaleHeart/MaleHeartCoronaryArteriesDisable
+    classID: 137
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -1.15
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 11
+        value: -1.15
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 13
+        value: -0.95
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material.Vector1_74CF4840
+    path: MaleHeart/MaleHeartCoronaryVeinsDisable
     classID: 137
     script: {fileID: 0}
   m_PPtrCurves: []
@@ -837,6 +911,20 @@ AnimationClip:
       isPPtrCurve: 0
     - serializedVersion: 2
       path: 1942370570
+      attribute: 2414920764
+      script: {fileID: 0}
+      typeID: 137
+      customType: 22
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 3893605936
+      attribute: 2414920764
+      script: {fileID: 0}
+      typeID: 137
+      customType: 22
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 4011071369
       attribute: 2414920764
       script: {fileID: 0}
       typeID: 137
@@ -1359,16 +1447,16 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 11
-        value: -370
-        inSlope: 0
-        outSlope: 0
+        value: -1.15
+        inSlope: 0.06153941
+        outSlope: 0.06153941
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 13
-        value: 370
+        value: -0.95
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1396,16 +1484,16 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 11
-        value: -370
-        inSlope: 0
-        outSlope: 0
+        value: -1.1
+        inSlope: 0.046146516
+        outSlope: 0.046146516
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 13
-        value: 370
+        value: -0.95
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1433,16 +1521,16 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 11
-        value: -370
-        inSlope: 0
-        outSlope: 0
+        value: -1.15
+        inSlope: 0.06153941
+        outSlope: 0.06153941
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 13
-        value: 370
+        value: -0.95
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1470,16 +1558,16 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 11
-        value: -370
-        inSlope: 0
-        outSlope: 0
+        value: -1.1
+        inSlope: 0.046146516
+        outSlope: 0.046146516
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 13
-        value: 370
+        value: -0.95
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1507,16 +1595,16 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 11
-        value: -370
-        inSlope: 0
-        outSlope: 0
+        value: -1.15
+        inSlope: 0.06153941
+        outSlope: 0.06153941
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 13
-        value: 370
+        value: -0.95
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1544,16 +1632,16 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 11
-        value: -370
-        inSlope: 0
-        outSlope: 0
+        value: -1.1
+        inSlope: 0.033839706
+        outSlope: 0.033839706
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 13
-        value: 370
+        value: -0.99
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1581,16 +1669,16 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 11
-        value: -370
-        inSlope: 0
-        outSlope: 0
+        value: -1.15
+        inSlope: 0.06153941
+        outSlope: 0.06153941
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 13
-        value: 370
+        value: -0.95
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1602,6 +1690,80 @@ AnimationClip:
       m_RotationOrder: 4
     attribute: material.Vector1_74CF4840
     path: MaleHeart/MaleHeartVeins
+    classID: 137
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -1.4
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 11
+        value: -1.15
+        inSlope: 0.034615383
+        outSlope: 0.034615383
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 13
+        value: -0.95
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material.Vector1_74CF4840
+    path: MaleHeart/MaleHeartCoronaryArteriesDisable
+    classID: 137
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -1.15
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 11
+        value: -1.15
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 13
+        value: -0.95
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material.Vector1_74CF4840
+    path: MaleHeart/MaleHeartCoronaryVeinsDisable
     classID: 137
     script: {fileID: 0}
   m_EulerEditorCurves: []
