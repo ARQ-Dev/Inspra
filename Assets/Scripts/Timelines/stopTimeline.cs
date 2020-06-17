@@ -20,7 +20,6 @@ public class stopTimeline : MonoBehaviour
         Male.Play("MaleFlash");
         Level.Play("IndicatorFlash");
         Solve.Play("SolveProblemAppearing");
-        
     }
 
     public void UnPause()
