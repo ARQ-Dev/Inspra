@@ -55,8 +55,7 @@ public class App : MonoBehaviour
 
         if (tokensStorage == null)
         {
-            //_login.Open();
-            _choice.Open();
+            _login.Open();
             return;
         }
 
@@ -64,9 +63,8 @@ public class App : MonoBehaviour
         NetworkManager.Instance.Authorization(
             (e, r) =>
             {
-                //print($"Error: {e}, Code: {r}");
-                //_login.Open();
-                _choice.Open();
+                print($"Error: {e}, Code: {r}");
+                _login.Open();
             },
             () =>
             {

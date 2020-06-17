@@ -59,8 +59,11 @@ public class VisualizationViewController : ViewController
         _view.PauseTapped -= OnPauseTapped;
         _view.UnPauseTapped -= OnUnPauseTapped;
 
-        _planeManager.enabled = false;
         _planeStateReporter.PlaneDetected -= OnPlaneDetected;
+
+        if (_planeManager != null)
+            _planeManager.enabled = false;
+
 
     }
 

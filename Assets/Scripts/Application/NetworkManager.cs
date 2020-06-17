@@ -8,7 +8,7 @@ using System;
 
 public class NetworkManager : Singleton<NetworkManager>
 {
-    const string BASE_URL = "https://api.revealyan.arq.su/";
+    const string BASE_URL = "https://api.projects.arq.studio/cardio/";
     const string AUTH = "signin";
     const string STAT = "statistic";
 
