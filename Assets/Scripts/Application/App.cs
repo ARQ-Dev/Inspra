@@ -45,7 +45,7 @@ public class App : MonoBehaviour
         _login.Login -= Login;
     }
 
-    private void Start()
+    private void Awake()
     {
 
         _usageTrackingManager.AcceptableBackgroundTime = _acceptableBackgroundTime;
@@ -63,7 +63,6 @@ public class App : MonoBehaviour
         NetworkManager.Instance.Authorization(
             (e, r) =>
             {
-                print($"Error: {e}, Code: {r}");
                 _login.Open();
             },
             () =>

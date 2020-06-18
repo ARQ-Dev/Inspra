@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Networking;
-using UnityEngine;
 using Newtonsoft.Json;
 using System.Text;
 using System;
@@ -103,6 +102,32 @@ public class NetworkManager : Singleton<NetworkManager>
             }));
     }
 
+    public void UpdateToken(string refreshToken, Action<string, long> onRefreshFailed = null, Action<TokenStorage> onRefreshSecces = null)
+    {
+        var request = "{\"refreshToken\": \"" + $"{refreshToken}" + "\"}";
+        Dictionary<string, string> headers = new Dictionary<string, string> { { "Content-Type", "application/json" } };
+        StartCoroutine(Request(BASE_URL + AUTH, "PUT", request, headers,
+            (webRequest) =>
+            {
+                if (webRequest.isHttpError || webRequest.isNetworkError)
+                {
+                    onRefreshFailed?.Invoke(webRequest.error, webRequest.responseCode);
+                }
+                else
+                {
+                    LoginResponse resonse = JsonConvert.DeserializeObject<LoginResponse>(webRequest.downloadHandler.text);
+
+                    var tokenStorage = new TokenStorage
+                    {
+                        refreshToken = resonse.refreshToken,
+                        token = resonse.token
+                    };
+
+                    onRefreshSecces?.Invoke(tokenStorage);
+                }
+            }));
+    }
+
     public void Authorization(Action<string, long> onFailed, Action onSecces)
     {
         Authentication(onSecces,
@@ -113,18 +138,36 @@ public class NetworkManager : Singleton<NetworkManager>
             });
     }
 
-    public void SendReport(string report, Action<string, long> onFailed, Action onSecces)
+    public void SendReport(
+        string report,
+        string refreshToken,
+        Action<string, long> onTokenUpdateFailed,
+        Action<string, long> onSendingFailed,
+        Action onSecces,
+        Action onCompleat)
     {
-        Authorization(onFailed,
-            () =>
+
+        UpdateToken(refreshToken,
+            (e, n) =>
             {
-                SendReportInternal(report, onFailed, onSecces);
+                onTokenUpdateFailed?.Invoke(e, n);
+            },
+
+            (storage) =>
+            {
+                SendReportInternal(report, storage, onSendingFailed, onSecces, onCompleat);
             });
+
     }
 
-    private void SendReportInternal(string report, Action<string, long> onFailed, Action onSecces)
+    private void SendReportInternal(
+        string report,
+        TokenStorage tokenStorage,
+        Action<string, long> onFailed,
+        Action onSecces,
+        Action onCompleat)
     {
-        Dictionary<string, string> headers = new Dictionary<string, string> { { "Authorization", $"Bearer {TokenStorage.token}" }, { "Content-Type", "application/json" } };
+        Dictionary<string, string> headers = new Dictionary<string, string> { { "Authorization", $"Bearer {tokenStorage.token}" }, { "Content-Type", "application/json" } };
         StartCoroutine(Request(BASE_URL + STAT, "POST", report, headers,
             (webRequest) =>
             {
@@ -136,6 +179,7 @@ public class NetworkManager : Singleton<NetworkManager>
                 {
                     onSecces?.Invoke();
                 }
+                onCompleat?.Invoke();
             }));
     }
 
