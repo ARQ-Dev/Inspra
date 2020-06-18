@@ -9,8 +9,6 @@ public class stopTimeline : MonoBehaviour
     public Animator Male;
     public Animator Level;
     public Animator Solve;
-    public Animator testAnimator;
-    public AudioSource audioSource;
     public static bool _firstTimeLineWasPaused = false;
     
     void OnEnable()
