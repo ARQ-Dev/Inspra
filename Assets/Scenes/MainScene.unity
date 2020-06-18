@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -614,10 +614,8 @@ MonoBehaviour:
   _popup: {fileID: 268695717}
   _uiElements:
   - {fileID: 1545735926}
-  - {fileID: 0}
-  - {fileID: 1199764687}
   - {fileID: 26003828}
-  - {fileID: 0}
+  - {fileID: 1199764687}
 --- !u!114 &198221882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8315,7 +8313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   r: {x: 20, y: 20, z: 0, w: 0}
   material: {fileID: 2100000, guid: 401dbf98bc9dd5b488789233ce4f634d, type: 2}
-  rect2props: {x: 0.000061035156, y: -10.000244, z: 1240.22, w: 1240.22}
+  rect2props: {x: 0.000061035156, y: -10.000122, z: 1192.3773, w: 1192.3773}
 --- !u!114 &4428499411479850447
 MonoBehaviour:
   m_ObjectHideFlags: 0
