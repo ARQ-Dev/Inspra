@@ -100,20 +100,21 @@ public class VisualizationViewController : ViewController
 
 #if !UNITY_EDITOR
 
-        if (gameObject.activeInHierarchy)
-            StartCoroutine(PlaneDetected(isPlaneDetected));
+        //if (gameObject.activeInHierarchy)
+        //    StartCoroutine(PlaneDetected(isPlaneDetected));
 
+        _view.ActivateHint(!isPlaneDetected);
+        _view.ActivateUI(isPlaneDetected);
+        _view.PresentPopup();
 #endif
 
     }
 
-    private IEnumerator PlaneDetected(bool isPlaneDetected)
-    {
-        _view.ActivateHint(!isPlaneDetected);
-        yield return null;
-        _view.ActivateUI(isPlaneDetected);
-        yield return new WaitForSeconds(1);
-        _view.PresentPopup();
-    }
+    //private IEnumerator PlaneDetected(bool isPlaneDetected)
+    //{
+    //    _view.ActivateHint(!isPlaneDetected);
+    //    _view.ActivateUI(isPlaneDetected);
+    //    _view.PresentPopup();
+    //}
 
 }
