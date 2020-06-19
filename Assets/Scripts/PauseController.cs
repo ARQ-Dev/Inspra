@@ -32,7 +32,6 @@ public class PauseController : MonoBehaviour
     {
         _directorCondition = directorCondition.Unpaused;
         if (!Director) return;
-        //Director.GetComponent<PauseController>().UnPause();
         if (!(stopTimeline._firstTimeLineWasPaused || StopTimeline2._secondTimeLineWasPaused))
         {
             Director.playableGraph.GetRootPlayable(0).SetSpeed(1);
