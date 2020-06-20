@@ -43,11 +43,11 @@ public class stopTimeline : MonoBehaviour
     {
         if (!director.GetComponent<PauseController>().TimelineWasPaused())
         {
+            _firstTimeLineWasPaused = false;
             CancelInvoke("PlaySpeech");
             _speechCounter = 0;
             _mainAudioSource.clip = _speechAfterButton;
             _mainAudioSource.Play();
-            _firstTimeLineWasPaused = false;
             director.playableGraph.GetRootPlayable(0).SetSpeed(1);
             Solve.Play("SwitchSolveButton");
         }

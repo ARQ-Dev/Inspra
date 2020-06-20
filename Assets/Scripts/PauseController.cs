@@ -24,6 +24,7 @@ public class PauseController : MonoBehaviour
     public void Pause()
     {
         if (!Director) return;
+        Director.GetComponent<AudioSource>().Pause();
         _directorCondition = directorCondition.Paused;
         Director.playableGraph.GetRootPlayable(0).SetSpeed(0);
     }
@@ -34,6 +35,7 @@ public class PauseController : MonoBehaviour
         if (!Director) return;
         if (!(stopTimeline._firstTimeLineWasPaused || StopTimeline2._secondTimeLineWasPaused))
         {
+            Director.GetComponent<AudioSource>().Pause();
             Director.playableGraph.GetRootPlayable(0).SetSpeed(1);
         }
     }
