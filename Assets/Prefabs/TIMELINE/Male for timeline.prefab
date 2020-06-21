@@ -4506,7 +4506,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 16777215
   m_fontColor: {r: 1, g: 1, b: 1, a: 0.8833795}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -11388,12 +11388,12 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: f0aedd94baccade44a095a63c3313ca9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.045
+      value: 0.178
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f0aedd94baccade44a095a63c3313ca9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.217
+      value: 0.326
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f0aedd94baccade44a095a63c3313ca9,
         type: 3}
@@ -11443,17 +11443,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: f0aedd94baccade44a095a63c3313ca9,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 25
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f0aedd94baccade44a095a63c3313ca9,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 25
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f0aedd94baccade44a095a63c3313ca9,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 25
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: f0aedd94baccade44a095a63c3313ca9,
         type: 3}
@@ -12244,7 +12244,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: f0aedd94baccade44a095a63c3313ca9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.105
+      value: -0.188
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f0aedd94baccade44a095a63c3313ca9,
         type: 3}
@@ -12299,17 +12299,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: f0aedd94baccade44a095a63c3313ca9,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f0aedd94baccade44a095a63c3313ca9,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f0aedd94baccade44a095a63c3313ca9,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: f0aedd94baccade44a095a63c3313ca9,
         type: 3}

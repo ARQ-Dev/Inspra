@@ -121,6 +121,7 @@ public class VisualizationViewController : ViewController
 
     private void OnInstantiated(GameObject go)
     {
+        Debug.Log("here");
         _view.HideActivePopup();
         _audioControllerBeforePlaced.StopAllStartedSpeech();
     }

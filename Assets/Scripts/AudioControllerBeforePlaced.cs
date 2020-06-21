@@ -41,6 +41,7 @@ public class AudioControllerBeforePlaced : MonoBehaviour
     }
     public void PlayClipsFirstScene()
     {
+        _headersBeforePlaced.gameObject.SetActive(true);
         StartCoroutine(ForFirstScene());
     }
 
@@ -59,12 +60,16 @@ public class AudioControllerBeforePlaced : MonoBehaviour
     {
         StopAllCoroutines();
         _audioSourceBeforePlaced.Stop();
+        _headersBeforePlaced.gameObject.SetActive(false);
         foreach (Transform child in _headersBeforePlaced.gameObject.transform)
+        {
             child.gameObject.SetActive(false);
+        }
     }
     
     public void PlayClipsSecondScene()
     {
+        _headersBeforePlaced.gameObject.SetActive(true);
         StartCoroutine(ForSecondScene());
     }
     IEnumerator ForSecondScene()
