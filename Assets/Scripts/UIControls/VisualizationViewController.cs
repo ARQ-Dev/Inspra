@@ -42,6 +42,8 @@ public class VisualizationViewController : ViewController
         _view.PauseTapped += OnPauseTapped;
         _view.UnPauseTapped += OnUnPauseTapped;
 
+        _istantiator.Instantiaded += OnInstantiated;
+
         _planeStateReporter.PlaneDetected += OnPlaneDetected;
 
         var director = FindObjectOfType<PlayableDirector>();
@@ -62,6 +64,8 @@ public class VisualizationViewController : ViewController
         _view.PauseTapped -= OnPauseTapped;
         _view.UnPauseTapped -= OnUnPauseTapped;
 
+        _istantiator.Instantiaded -= OnInstantiated;
+
         _planeStateReporter.PlaneDetected -= OnPlaneDetected;
 
         if (_planeManager != null)
@@ -70,7 +74,7 @@ public class VisualizationViewController : ViewController
 
     }
 
-#endregion
+    #endregion
 
     private void OnBackTapped()
     {
@@ -105,16 +109,15 @@ public class VisualizationViewController : ViewController
 
         _view.ActivateHint(!isPlaneDetected);
         _view.ActivateUI(isPlaneDetected);
-        _view.PresentPopup();
+        if (isPlaneDetected)
+            _view.PresentPopup();
 #endif
+
 
     }
 
-    //private IEnumerator PlaneDetected(bool isPlaneDetected)
-    //{
-    //    _view.ActivateHint(!isPlaneDetected);
-    //    _view.ActivateUI(isPlaneDetected);
-    //    _view.PresentPopup();
-    //}
-
+    private void OnInstantiated(GameObject go)
+    {
+        _view.HideActivePopup();
+    }
 }

@@ -9,16 +9,21 @@ namespace ARQ.NeuroSym.UIKit
     {
         [SerializeField]
         private float _toastDuration;
+
         [SerializeField]
         private float _moveDuration;
+
         [SerializeField]
         private GameObject[] _popups;
+
         [SerializeField]
         private Vector2 _shownPosition;
+
         [SerializeField]
         private Vector2 _hidenPosition;
 
         private RectTransform _rectTransfrom;
+
         private GameObject _currentPopup;
 
         private void Awake()
@@ -41,17 +46,19 @@ namespace ARQ.NeuroSym.UIKit
         {
             StopAllCoroutines();
             _rectTransfrom.DOAnchorPos(_shownPosition, _moveDuration).SetEase(Ease.OutExpo);
-            StartCoroutine( StartCountdownCoroutine() );
+
         }
-        private void HidePopup()
+
+        public void HideActivePopup()
         {
-            _rectTransfrom.DOAnchorPos(_hidenPosition, _moveDuration).SetEase(Ease.OutExpo);
+
+            StartCoroutine(StartCountdownCoroutine());
         }
 
         private IEnumerator StartCountdownCoroutine()
         {
             yield return new WaitForSecondsRealtime(_toastDuration);
-            HidePopup();
+            _rectTransfrom.DOAnchorPos(_hidenPosition, _moveDuration).SetEase(Ease.OutExpo);
         }
 
     }

@@ -66,6 +66,11 @@ public class VisualizationView : MonoBehaviour
         _popup.ShowPopupByIndex(0);
     }
 
+    public void HideActivePopup()
+    {
+        _popup.HideActivePopup();
+    }
+
     public void ActivateUI(bool isActive)
     {
         foreach (GameObject go in _uiElements)
