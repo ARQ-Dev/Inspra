@@ -327,10 +327,50 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1875637765584500551, guid: 3eb7e976492c5459fa2c31db2913d517,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 185
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875637765584500551, guid: 3eb7e976492c5459fa2c31db2913d517,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875637765584500551, guid: 3eb7e976492c5459fa2c31db2913d517,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875637765584500551, guid: 3eb7e976492c5459fa2c31db2913d517,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875637765584500551, guid: 3eb7e976492c5459fa2c31db2913d517,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875637765584500551, guid: 3eb7e976492c5459fa2c31db2913d517,
+        type: 3}
+      propertyPath: m_textInfo.materialCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758550143614518469, guid: 3eb7e976492c5459fa2c31db2913d517,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 16777215
+      objectReference: {fileID: 0}
     - target: {fileID: 6020869848687279100, guid: 3eb7e976492c5459fa2c31db2913d517,
         type: 3}
       propertyPath: m_Name
       value: Male for timeline
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020869848687279100, guid: 3eb7e976492c5459fa2c31db2913d517,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6188679908224538088, guid: 3eb7e976492c5459fa2c31db2913d517,
         type: 3}
@@ -341,6 +381,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_sharedMaterial
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6188679908224538088, guid: 3eb7e976492c5459fa2c31db2913d517,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7337829316732619247, guid: 3eb7e976492c5459fa2c31db2913d517,
         type: 3}
@@ -396,6 +441,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8102360804726199947, guid: 3eb7e976492c5459fa2c31db2913d517,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3eb7e976492c5459fa2c31db2913d517, type: 3}
