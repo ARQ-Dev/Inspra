@@ -134,6 +134,7 @@ public class NetworkManager : Singleton<NetworkManager>
                 }
                 else
                 {
+                    print(report);
                     onSecces?.Invoke();
                 }
             }));

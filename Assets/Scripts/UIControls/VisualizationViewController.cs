@@ -81,8 +81,8 @@ public class VisualizationViewController : ViewController
 
     private void OnBackTapped()
     {
-        _istantiator.DeleteInstantiatedPrefab();
         _usageTrackingManager.SessionEnded();
+        _istantiator.DeleteInstantiatedPrefab();
         Present(_nextViewController);
         _planeManager.enabled = false;
     }
@@ -99,7 +99,6 @@ public class VisualizationViewController : ViewController
     {
         _timelineController.UnPause();
         _timer.UnpauseTimer();
-        _view.PresentPopup();
     }
 
     private void OnPlaneDetected(bool isPlaneDetected)

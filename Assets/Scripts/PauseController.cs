@@ -1,10 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 using UnityEngine.Playables;
+
 
 public class PauseController : MonoBehaviour
 {
+    public event Action VisualizationPaused;
+    public event Action VisualizationUnpaused;
+
     enum directorCondition
     {
         Paused,
@@ -38,6 +43,7 @@ public class PauseController : MonoBehaviour
         _directorCondition = directorCondition.Paused;
         PauseAudio();
         Director.playableGraph.GetRootPlayable(0).SetSpeed(0);
+        VisualizationPaused?.Invoke();
     }
 
     public void UnPause()
@@ -48,6 +54,7 @@ public class PauseController : MonoBehaviour
         {
             ResumeAudio();
             Director.playableGraph.GetRootPlayable(0).SetSpeed(1);
+            VisualizationUnpaused?.Invoke();
         }
     }
 

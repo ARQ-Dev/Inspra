@@ -33,6 +33,8 @@ public class UsageTrackingManager : Singleton<UsageTrackingManager>
 
     private ReportsStorage _reportsStorage;
 
+    private PauseController _pauseController;
+
     #region MonoBehaviour
 
     private void OnEnable()
@@ -108,6 +110,12 @@ public class UsageTrackingManager : Singleton<UsageTrackingManager>
                 _reportsStorage.reports.Add(UserName, container);
             }
 
+
+            if (_pauseController != null)
+            {
+                _pauseController.VisualizationPaused += OnVisualizationPaused;
+                _pauseController.VisualizationUnpaused += OnVisualizationUnpaused;
+            }
         }
 
         TrySendReport();
@@ -155,9 +163,27 @@ public class UsageTrackingManager : Singleton<UsageTrackingManager>
     private void OnVisualizationInstantiated(GameObject go)
     {
         var visualization = go.GetComponent<Visualization>();
+        _pauseController = go.GetComponent<PauseController>();
+
+        if (_pauseController != null)
+        {
+            _pauseController.VisualizationPaused += OnVisualizationPaused;
+            _pauseController.VisualizationUnpaused += OnVisualizationUnpaused;
+        }
 
         if (visualization != null)
             SessionStarted(visualization.Number);
-
     }
+
+    private void OnVisualizationPaused()
+    {
+        _timer.PauseTimer();
+    }
+
+    private void OnVisualizationUnpaused()
+    {
+        _timer.UnpauseTimer();
+    }
+
 }
+
