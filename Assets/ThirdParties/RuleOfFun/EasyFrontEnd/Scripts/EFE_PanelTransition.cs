@@ -80,6 +80,10 @@ public class EFE_PanelTransition : MonoBehaviour {
 	public void DoTransitionIn()
 	{
 		print(gameObject.name);
+
+		if (efe_base_comp == null)
+			efe_base_comp = FindObjectOfType<EFE_Base>();
+
 		efe_base_comp.panelIsTransitioning=true;
 		
 		SetEasingType();

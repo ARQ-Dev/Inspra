@@ -8,28 +8,34 @@ public static class BsonDataManager
     {
         if (!File.Exists(path)) return null;
 
-        var bytes = File.ReadAllBytes(path);
+        var json = File.ReadAllText(path);
+        return JsonConvert.DeserializeObject<T>(json);
 
-        if (bytes == null) return null;
+        //var bytes = File.ReadAllBytes(path);
 
-        MemoryStream ms = new MemoryStream(bytes);
-        using (BsonReader reader = new BsonReader(ms))
-        {
-            JsonSerializer serializer = new JsonSerializer();
-            return serializer.Deserialize<T>(reader);
-        }
+        //if (bytes == null) return null;
+
+        //MemoryStream ms = new MemoryStream(bytes);
+        //using (BsonReader reader = new BsonReader(ms))
+        //{
+        //    JsonSerializer serializer = new JsonSerializer();
+        //    return serializer.Deserialize<T>(reader);
+        //}
     }
 
     public static void WriteData<T>(string path, T data) where T : class
     {
-        MemoryStream ms = new MemoryStream();
-        using (BsonWriter writer = new BsonWriter(ms))
-        {
-            JsonSerializer serializer = new JsonSerializer();
-            serializer.Serialize(writer, data);
-        }
-        var bytes = ms.ToArray();
-        File.WriteAllBytes(path, bytes);
+        var json = JsonConvert.SerializeObject(data);
+        File.WriteAllText(path, json);
+
+        //MemoryStream ms = new MemoryStream();
+        //using (BsonWriter writer = new BsonWriter(ms))
+        //{
+        //    JsonSerializer serializer = new JsonSerializer();
+        //    serializer.Serialize(writer, data);
+        //}
+        //var bytes = ms.ToArray();
+        //File.WriteAllBytes(path, bytes);
     }
 
     public static void DeleteData(string path)

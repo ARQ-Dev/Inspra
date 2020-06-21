@@ -11,23 +11,24 @@ public class NetworkManager : Singleton<NetworkManager>
     const string AUTH = "signin";
     const string STAT = "statistic";
 
-    private TokenStorage _tokenStorage;
-    public TokenStorage TokenStorage
+    private UserDataStorage _userDataStorage;
+    public UserDataStorage UserDataStorage
     {
         get
         {
-            if (_tokenStorage == null)
+            if (_userDataStorage == null)
             {
-                _tokenStorage = new TokenStorage();
-                _tokenStorage.refreshToken = "";
-                _tokenStorage.token = "";
+                _userDataStorage = new UserDataStorage();
+                _userDataStorage.login = "";
+                _userDataStorage.refreshToken = "";
+                _userDataStorage.token = "";
             }
-            return _tokenStorage;
+            return _userDataStorage;
         }
 
         set
         {
-            _tokenStorage = value;
+            _userDataStorage = value;
         }
 
     }
@@ -54,8 +55,9 @@ public class NetworkManager : Singleton<NetworkManager>
                 else
                 {
                     LoginResponse resonse = JsonConvert.DeserializeObject<LoginResponse>(webRequest.downloadHandler.text);
-                    TokenStorage.token = resonse.token;
-                    TokenStorage.refreshToken = resonse.refreshToken;
+                    UserDataStorage.login = userData.login;
+                    UserDataStorage.token = resonse.token;
+                    UserDataStorage.refreshToken = resonse.refreshToken;
                     onLoginSecces?.Invoke();
                 }
             }));
@@ -63,7 +65,7 @@ public class NetworkManager : Singleton<NetworkManager>
 
     public void Authentication(Action onTokenValid, Action<string, long> onTokenInvalid)
     {
-        Dictionary<string, string> headers = new Dictionary<string, string> { { "Authorization", $"Bearer {TokenStorage.token}" } };
+        Dictionary<string, string> headers = new Dictionary<string, string> { { "Authorization", $"Bearer {UserDataStorage.token}" } };
         StartCoroutine(Request(BASE_URL + AUTH, "GET", "", headers,
             (webRequest) =>
             {
@@ -83,7 +85,7 @@ public class NetworkManager : Singleton<NetworkManager>
 
     public void UpdateToken(Action<string, long> onRefreshFailed = null, Action onRefreshSecces = null)
     {
-        var request = "{\"refreshToken\": \"" + $"{TokenStorage.refreshToken}" + "\"}";
+        var request = "{\"refreshToken\": \"" + $"{UserDataStorage.refreshToken}" + "\"}";
         Dictionary<string, string> headers = new Dictionary<string, string> { { "Content-Type", "application/json" } };
         StartCoroutine(Request(BASE_URL + AUTH, "PUT", request, headers,
             (webRequest) =>
@@ -95,35 +97,9 @@ public class NetworkManager : Singleton<NetworkManager>
                 else
                 {
                     LoginResponse resonse = JsonConvert.DeserializeObject<LoginResponse>(webRequest.downloadHandler.text);
-                    TokenStorage.token = resonse.token;
-                    TokenStorage.refreshToken = resonse.refreshToken;
+                    UserDataStorage.token = resonse.token;
+                    UserDataStorage.refreshToken = resonse.refreshToken;
                     onRefreshSecces?.Invoke();
-                }
-            }));
-    }
-
-    public void UpdateToken(string refreshToken, Action<string, long> onRefreshFailed = null, Action<TokenStorage> onRefreshSecces = null)
-    {
-        var request = "{\"refreshToken\": \"" + $"{refreshToken}" + "\"}";
-        Dictionary<string, string> headers = new Dictionary<string, string> { { "Content-Type", "application/json" } };
-        StartCoroutine(Request(BASE_URL + AUTH, "PUT", request, headers,
-            (webRequest) =>
-            {
-                if (webRequest.isHttpError || webRequest.isNetworkError)
-                {
-                    onRefreshFailed?.Invoke(webRequest.error, webRequest.responseCode);
-                }
-                else
-                {
-                    LoginResponse resonse = JsonConvert.DeserializeObject<LoginResponse>(webRequest.downloadHandler.text);
-
-                    var tokenStorage = new TokenStorage
-                    {
-                        refreshToken = resonse.refreshToken,
-                        token = resonse.token
-                    };
-
-                    onRefreshSecces?.Invoke(tokenStorage);
                 }
             }));
     }
@@ -137,37 +113,18 @@ public class NetworkManager : Singleton<NetworkManager>
 
             });
     }
-
-    public void SendReport(
-        string report,
-        string refreshToken,
-        Action<string, long> onTokenUpdateFailed,
-        Action<string, long> onSendingFailed,
-        Action onSecces,
-        Action onCompleat)
+    public void SendReport(string report, Action<string, long> onFailed, Action onSecces)
     {
-
-        UpdateToken(refreshToken,
-            (e, n) =>
+        Authorization(onFailed,
+            () =>
             {
-                onTokenUpdateFailed?.Invoke(e, n);
-            },
-
-            (storage) =>
-            {
-                SendReportInternal(report, storage, onSendingFailed, onSecces, onCompleat);
+                SendReportInternal(report, onFailed, onSecces);
             });
-
     }
 
-    private void SendReportInternal(
-        string report,
-        TokenStorage tokenStorage,
-        Action<string, long> onFailed,
-        Action onSecces,
-        Action onCompleat)
+    private void SendReportInternal(string report, Action<string, long> onFailed, Action onSecces)
     {
-        Dictionary<string, string> headers = new Dictionary<string, string> { { "Authorization", $"Bearer {tokenStorage.token}" }, { "Content-Type", "application/json" } };
+        Dictionary<string, string> headers = new Dictionary<string, string> { { "Authorization", $"Bearer {UserDataStorage.token}" }, { "Content-Type", "application/json" } };
         StartCoroutine(Request(BASE_URL + STAT, "POST", report, headers,
             (webRequest) =>
             {
@@ -179,7 +136,6 @@ public class NetworkManager : Singleton<NetworkManager>
                 {
                     onSecces?.Invoke();
                 }
-                onCompleat?.Invoke();
             }));
     }
 

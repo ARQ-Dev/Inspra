@@ -4,7 +4,6 @@ using UnityEngine;
 using System.IO;
 
 public class App : MonoBehaviour
-
 {
     #region SerializeFields
 
@@ -47,11 +46,10 @@ public class App : MonoBehaviour
 
     private void Awake()
     {
-
         _usageTrackingManager.AcceptableBackgroundTime = _acceptableBackgroundTime;
 
         var tokensPath = Path.Combine(Application.persistentDataPath, TOKENS_STORAGE_FILENAME);
-        TokenStorage tokensStorage = BsonDataManager.ReadData<TokenStorage>(tokensPath);
+        UserDataStorage tokensStorage = BsonDataManager.ReadData<UserDataStorage>(tokensPath);
 
         if (tokensStorage == null)
         {
@@ -59,7 +57,7 @@ public class App : MonoBehaviour
             return;
         }
 
-        NetworkManager.Instance.TokenStorage = tokensStorage;
+        NetworkManager.Instance.UserDataStorage = tokensStorage;
         NetworkManager.Instance.Authorization(
             (e, r) =>
             {
@@ -68,6 +66,7 @@ public class App : MonoBehaviour
             () =>
             {
                 _choice.Open();
+                UsageTrackingManager.Instance.GrabReports();
             });
     }
 
@@ -91,7 +90,7 @@ public class App : MonoBehaviour
     private void Logout()
     {
         var tokensPath = Path.Combine(Application.persistentDataPath, TOKENS_STORAGE_FILENAME);
-        NetworkManager.Instance.TokenStorage = null;
+        NetworkManager.Instance.UserDataStorage = null;
         BsonDataManager.DeleteData(tokensPath);
     }
 
@@ -107,12 +106,13 @@ public class App : MonoBehaviour
             () =>
             {
                 _login.SeccesfuleLogin();
-                var tokenStorage = NetworkManager.Instance.TokenStorage;
+                var tokenStorage = NetworkManager.Instance.UserDataStorage;
                 var path = Path.Combine(Application.persistentDataPath, TOKENS_STORAGE_FILENAME);
                 BsonDataManager.WriteData(path, tokenStorage);
+
+                UsageTrackingManager.Instance.GrabReports();
             });
     }
-
 
     #endregion
 }
