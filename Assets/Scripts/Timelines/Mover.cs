@@ -12,23 +12,20 @@ public class Mover : MonoBehaviour
 
     private void Start()
     {
-        _timingList = new List<float> { 3, 19.3f,50.3f,71.7f,108.4f, 118.35f, 129.8f, 151.3f};
+        _timingList = new List<float> { 0, 30.5f, 61.52f, 100.589410430839f, 119.55253968254f, 129.489410430839f, 140.96537414966f, 162.439410430839f };
     }
     
     public void NextMove()
     {
         var dirTime = _director.time;
-        if (dirTime < 152)
+        if (dirTime < 164)
         {
             foreach (var timing in _timingList)
             {
                 if(timing > dirTime)
                 {
                     _director.time = timing;
-                    if (timing == 129.8f)
-                        stopTimeline.peremotka = true;
-                    else
-                        stopTimeline.peremotka = false;
+                    
                     stopTimeline._firstTimeLineWasPaused = false;
                         _director.GetComponent<AudioSource>().Stop();
                         _director.playableGraph.GetRootPlayable(0).SetSpeed(1);
@@ -49,10 +46,7 @@ public class Mover : MonoBehaviour
             if(timing< dirTime-2)
             {
                 _director.time = timing;
-                if (timing == 129.8f)
-                    stopTimeline.peremotka = true;
-                else
-                    stopTimeline.peremotka = false;
+               
                 stopTimeline._firstTimeLineWasPaused = false;
                     _director.GetComponent<AudioSource>().Stop();
                     _director.playableGraph.GetRootPlayable(0).SetSpeed(1);

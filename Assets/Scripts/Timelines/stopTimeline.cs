@@ -14,7 +14,6 @@ public class stopTimeline : MonoBehaviour
     public AudioClip _speechBeforeButton;
     private int _speechCounter = 0;
     private PauseController _pauseController;
-    public static bool peremotka = false;
     void OnEnable()
     {
         _pauseController = director.GetComponent<PauseController>();
@@ -52,26 +51,13 @@ public class stopTimeline : MonoBehaviour
 
     public void Pause()
     {
-        if (peremotka)
-        {
-            CancelInvoke();
-            _speechCounter = 0;
-            _firstTimeLineWasPaused = false;
-            _mainAudioSource.Stop();
-            Level.Play("IndicatorFlash");
-            Male.Play("MaleFlash");
-            director.playableGraph.GetRootPlayable(0).SetSpeed(1);
-            Solve.Play("SwitchSolveButton");
-            peremotka = false;
-        }
-        else
-        {
-            director.playableGraph.GetRootPlayable(0).SetSpeed(0);
+        _mainAudioSource.Stop();
+        director.playableGraph.GetRootPlayable(0).SetSpeed(0);
             InvokeRepeating("PlaySpeech", 2, 12.5f);
             Level.Play("IndicatorFlash");
             Male.Play("MaleFlash");
             _firstTimeLineWasPaused = true;
             Solve.Play("SolveProblemAppearing");
-        }
+        
     }
 }
