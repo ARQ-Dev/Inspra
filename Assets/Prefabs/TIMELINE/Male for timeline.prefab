@@ -536,7 +536,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 469762047
+    rgba: 16777215
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -3641,7 +3641,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 2785017855
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -4093,7 +4093,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7591223692027681041
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6106,7 +6106,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 483a42bd4921fba46ad22ac268e6b2e6, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -6207,7 +6207,7 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: 7f10a2da04ca0ce43a9743d3df617a49, type: 2}
-    - {fileID: 0}
+    - {fileID: 11400000, guid: 5f8b860ebfbb25141a7463779d84975e, type: 2}
     - {fileID: 11400000, guid: 769990f299d02724693b5df0ab8139a1, type: 2}
     - {fileID: 11400000, guid: 5f6327d128a09834fbe7120a16ceab95, type: 2}
     - {fileID: 11400000, guid: c2d86be0021b0c4408fd6fd1e6d4c0eb, type: 2}
@@ -6223,6 +6223,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 46235ad88e61da5498d4efad7ff3654e, type: 2}
     - {fileID: 11400000, guid: ea820492a9e3efb40b534edf301194ac, type: 2}
     - {fileID: 11400000, guid: 5369e32e1d2e08b4489cae8558ecf249, type: 2}
+    - {fileID: 11400000, guid: 05ac50c314c1d2949a0baf07768b4681, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -6238,7 +6239,18 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
     - m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 1272764160}
+          m_MethodName: PlayClip
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 15
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1272764160}
@@ -6277,7 +6289,7 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
-          m_CallState: 2
+          m_CallState: 1
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1272764160}
@@ -6342,7 +6354,7 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
-          m_CallState: 2
+          m_CallState: 1
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1272764160}
@@ -6368,7 +6380,7 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
-          m_CallState: 2
+          m_CallState: 1
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1272764160}
@@ -6434,6 +6446,19 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1272764160}
+          m_MethodName: PlayClip
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 14
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &1272764160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6462,6 +6487,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 43dd836581dfd5547b00b4b944094460, type: 3}
   - {fileID: 8300000, guid: 46e4a7444a8618448a881e22b582a232, type: 3}
   - {fileID: 8300000, guid: 7d5d660c900f93e40aed4d6a2425472f, type: 3}
+  - {fileID: 8300000, guid: fa787d6169a8ec14294940d673f9e6c1, type: 3}
+  - {fileID: 8300000, guid: 0e692209fa1a4a9498d45ba94ade8e8e, type: 3}
 --- !u!82 &1272764161
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6831,7 +6858,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6988577668473324500}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -8057,7 +8084,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 16777215
   m_fontColor: {r: 1, g: 1, b: 1, a: 0.6002258}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -10443,7 +10470,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8405591715548218741
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10504,7 +10531,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 16777215
   m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3

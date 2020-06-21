@@ -12,7 +12,7 @@ public class StopTimeline2 : MonoBehaviour
     public AudioClip _speechAfterButton2;
     [SerializeField]
     private AudioSource _mainAudioSource;
-    private bool _wasPassed = false;
+    private bool _wasPassed1 = false;
 
 
     PauseController _pauseController;
@@ -25,16 +25,11 @@ public class StopTimeline2 : MonoBehaviour
 
     public void Pause1()
     {
-        if (_wasPassed)
-        {
-            IfWasPassed();
-        }
-        else
-        {
+        
             InvokeRepeating("PlaySpeechBeforeButton", 0, 12.5f);
             _secondTimeLineWasPaused = true;
             director.playableGraph.GetRootPlayable(0).SetSpeed(0);
-        }
+        
     }
 
     public void Pause2()
@@ -46,13 +41,17 @@ public class StopTimeline2 : MonoBehaviour
 
     public void Pause3()
     {
-        if (!_wasPassed)
-        {
+        
             _secondTimeLineWasPaused = true;
             director.playableGraph.GetRootPlayable(0).SetSpeed(0);
-        }
+        
     }
    
+    public void UnPause3()
+    {
+        _secondTimeLineWasPaused = false;
+        director.playableGraph.GetRootPlayable(0).SetSpeed(1);
+    }
 
     void PlaySpeechBeforeButton()
     {
@@ -68,10 +67,7 @@ public class StopTimeline2 : MonoBehaviour
         }
     }
 
-    public void WasPassedTrue()
-    {
-        _wasPassed = true;
-    }
+    
 
     public void UnPause()
     {
@@ -79,13 +75,12 @@ public class StopTimeline2 : MonoBehaviour
         {
             _mainAudioSource.Stop();
             _secondTimeLineWasPaused = false;
-            if (director.time < 100)
+            if (director.time < 110)
             {
                 CancelInvoke();
                 _speechCounter = 0;
-                _wasPassed = true;
             }
-            if (director.time > 110 && director.time<120)
+            if (director.time > 120 && director.time<130)
             {
                 _mainAudioSource.clip = _speechAfterButton2;
                 _mainAudioSource.Play();
@@ -98,27 +93,26 @@ public class StopTimeline2 : MonoBehaviour
     public void IfWasPassed()
     {
         _mainAudioSource.Stop();
-        _wasPassed = false;
     }
 
     public void DropRisks()
     {
         _mainAudioSource.Stop();
-        director.time = 169.5f;
+        director.time = 176.2f;
         director.playableGraph.GetRootPlayable(0).SetSpeed(1);
     }
 
     public void ReturnInspra()
     {
         _mainAudioSource.Stop();
-        director.time = 142.9f;
+        director.time = 149;
         director.playableGraph.GetRootPlayable(0).SetSpeed(1);
     }
 
     public void Reasons()
     {
         _mainAudioSource.Stop();
-        director.time = 98;
+        director.time = 104.1f;
         director.playableGraph.GetRootPlayable(0).SetSpeed(1);
     }
 }
