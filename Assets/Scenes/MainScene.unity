@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -32.00049, y: -50}
+  m_AnchoredPosition: {x: -32, y: -50}
   m_SizeDelta: {x: 56, y: 56}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &26003830
@@ -884,7 +884,7 @@ PrefabInstance:
     - target: {fileID: 6924774594791864695, guid: a6fc44e1d03af004e95aa27fae7f3d0f,
         type: 3}
       propertyPath: _toastDuration
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6924774594791864695, guid: a6fc44e1d03af004e95aa27fae7f3d0f,
         type: 3}
@@ -2046,10 +2046,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f69e6c6a7374bea42a5ccc67b730d6ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _planePositioner: {fileID: 2077011466}
-  Headers:
-  - {fileID: 1885902501}
-  - {fileID: 1945052734}
 --- !u!1001 &953093706
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8313,7 +8309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   r: {x: 20, y: 20, z: 0, w: 0}
   material: {fileID: 2100000, guid: 401dbf98bc9dd5b488789233ce4f634d, type: 2}
-  rect2props: {x: 0.000061035156, y: -10.000122, z: 1192.3773, w: 1192.3773}
+  rect2props: {x: 0.000061035156, y: -10.000244, z: 1090.356, w: 1090.356}
 --- !u!114 &4428499411479850447
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -5,28 +5,30 @@ using UnityEngine.Playables;
 
 public class Mover : MonoBehaviour
 {
-    private List<int> _timingList;
+    private List<float> _timingList;
 
     [SerializeField]
-    PlayableDirector _director;
+    private PlayableDirector _director;
 
     private void Start()
     {
-        _timingList = new List<int> { 0, 7,27,40,46,48,52,69};
+        _timingList = new List<float> { 0, 19.3f,50.3f,87.4f,101.5f,6505/60.0f,120,140.6f};
     }
-
+    
     public void NextMove()
     {
         var dirTime = _director.time;
-        if (dirTime < 69)
+        if (dirTime < 141)
         {
             foreach (var timing in _timingList)
             {
-                if(timing > (int)dirTime)
+                if(timing > dirTime)
                 {
                     _director.time = timing;
-                    if (timing != 52)
+                    if (timing != 120)
                     {
+                        stopTimeline._firstTimeLineWasPaused = false;
+                        _director.GetComponent<AudioSource>().Stop();
                         _director.playableGraph.GetRootPlayable(0).SetSpeed(1);
                     }
                     else
@@ -42,20 +44,18 @@ public class Mover : MonoBehaviour
     public void PrevMove()
     {
         var dirTime = _director.time;
-        List<int> reverseTimingList = new List<int>(_timingList);
+        List<float> reverseTimingList = new List<float>(_timingList);
         reverseTimingList.Reverse();
         foreach (var timing in reverseTimingList)
         {
-            if(timing< (int)dirTime-2)
+            if(timing< dirTime-2)
             {
                 _director.time = timing;
-                if (timing != 52)
+                if (timing != 120)
                 {
+                    stopTimeline._firstTimeLineWasPaused = false;
+                    _director.GetComponent<AudioSource>().Stop();
                     _director.playableGraph.GetRootPlayable(0).SetSpeed(1);
-                }
-                else
-                {
-                    _director.playableGraph.GetRootPlayable(0).SetSpeed(0);
                 }
                 break;
             }
