@@ -327,15 +327,40 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1846312629066522834, guid: 3eb7e976492c5459fa2c31db2913d517,
+    - target: {fileID: 1875637765584500551, guid: 3eb7e976492c5459fa2c31db2913d517,
         type: 3}
-      propertyPath: m_Material
-      value: 
+      propertyPath: m_textInfo.characterCount
+      value: 185
       objectReference: {fileID: 0}
-    - target: {fileID: 1846312629066522834, guid: 3eb7e976492c5459fa2c31db2913d517,
+    - target: {fileID: 1875637765584500551, guid: 3eb7e976492c5459fa2c31db2913d517,
         type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
+      propertyPath: m_textInfo.spaceCount
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875637765584500551, guid: 3eb7e976492c5459fa2c31db2913d517,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875637765584500551, guid: 3eb7e976492c5459fa2c31db2913d517,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875637765584500551, guid: 3eb7e976492c5459fa2c31db2913d517,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875637765584500551, guid: 3eb7e976492c5459fa2c31db2913d517,
+        type: 3}
+      propertyPath: m_textInfo.materialCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758550143614518469, guid: 3eb7e976492c5459fa2c31db2913d517,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 16777215
       objectReference: {fileID: 0}
     - target: {fileID: 6020869848687279100, guid: 3eb7e976492c5459fa2c31db2913d517,
         type: 3}
@@ -345,7 +370,7 @@ PrefabInstance:
     - target: {fileID: 6020869848687279100, guid: 3eb7e976492c5459fa2c31db2913d517,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6188679908224538088, guid: 3eb7e976492c5459fa2c31db2913d517,
         type: 3}
@@ -356,6 +381,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_sharedMaterial
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6188679908224538088, guid: 3eb7e976492c5459fa2c31db2913d517,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7337829316732619247, guid: 3eb7e976492c5459fa2c31db2913d517,
         type: 3}
@@ -415,7 +445,7 @@ PrefabInstance:
     - target: {fileID: 8102360804726199947, guid: 3eb7e976492c5459fa2c31db2913d517,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3eb7e976492c5459fa2c31db2913d517, type: 3}
@@ -426,6 +456,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< HEAD
     - target: {fileID: 394816678491408773, guid: 653099d1ddd0a3d4cbbac2e65c047574,
         type: 3}
       propertyPath: m_Enabled
@@ -500,6 +531,8 @@ PrefabInstance:
       value: 18.9
 >>>>>>> origin/PravkiSDenisom
       objectReference: {fileID: 0}
+=======
+>>>>>>> origin/PravkiSDenisom
     - target: {fileID: 3314991514124097394, guid: 653099d1ddd0a3d4cbbac2e65c047574,
         type: 3}
       propertyPath: m_Material
@@ -509,11 +542,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3314991514124097394, guid: 653099d1ddd0a3d4cbbac2e65c047574,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3445209808049614130, guid: 653099d1ddd0a3d4cbbac2e65c047574,
         type: 3}
@@ -575,6 +603,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: SecondTimeline
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 3445209808049614132, guid: 653099d1ddd0a3d4cbbac2e65c047574,
         type: 3}
       propertyPath: m_IsActive
@@ -608,6 +637,8 @@ PrefabInstance:
       propertyPath: m_textInfo.lineCount
       value: 4
       objectReference: {fileID: 0}
+=======
+>>>>>>> origin/PravkiSDenisom
     - target: {fileID: 3529590311453522539, guid: 653099d1ddd0a3d4cbbac2e65c047574,
         type: 3}
       propertyPath: m_Material
@@ -617,16 +648,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3529590311453522539, guid: 653099d1ddd0a3d4cbbac2e65c047574,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3665148451777283562, guid: 653099d1ddd0a3d4cbbac2e65c047574,
-        type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 16777215
       objectReference: {fileID: 0}
     - target: {fileID: 6316133983804474877, guid: 653099d1ddd0a3d4cbbac2e65c047574,
         type: 3}
@@ -638,16 +659,6 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 6316133983804474877, guid: 653099d1ddd0a3d4cbbac2e65c047574,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7237552704283112878, guid: 653099d1ddd0a3d4cbbac2e65c047574,
-        type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 16777215
-      objectReference: {fileID: 0}
     - target: {fileID: 7551457146924710251, guid: 653099d1ddd0a3d4cbbac2e65c047574,
         type: 3}
       propertyPath: m_Material
@@ -658,11 +669,6 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 7551457146924710251, guid: 653099d1ddd0a3d4cbbac2e65c047574,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7909315439067881539, guid: 653099d1ddd0a3d4cbbac2e65c047574,
         type: 3}
       propertyPath: m_Material
@@ -672,21 +678,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7909315439067881539, guid: 653099d1ddd0a3d4cbbac2e65c047574,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8471057758832791987, guid: 653099d1ddd0a3d4cbbac2e65c047574,
-        type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 16777215
-      objectReference: {fileID: 0}
-    - target: {fileID: 9019707957057345281, guid: 653099d1ddd0a3d4cbbac2e65c047574,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 653099d1ddd0a3d4cbbac2e65c047574, type: 3}

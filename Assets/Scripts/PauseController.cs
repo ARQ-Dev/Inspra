@@ -11,29 +11,45 @@ public class PauseController : MonoBehaviour
         Unpaused
     }
 
-    PlayableDirector Director { get; set; }
+    PlayableDirector Director;
+    AudioController _audioController;
 
     directorCondition _directorCondition;
 
     private void Start()
     {
         _directorCondition = directorCondition.Unpaused;
-
+        _audioController = GetComponent<AudioController>();
         Director = GetComponent<PlayableDirector>();
+    }
+
+    //пауза останавливает речь -
+    //пауза останавливает анимацию -
+
+    void PauseAudio()
+    {
+        _audioController.PauseAudio();
+    }
+
+    void ResumeAudio()
+    {
+        _audioController.ResumeAudio();
     }
     public void Pause()
     {
         if (!Director) return;
         _directorCondition = directorCondition.Paused;
+        PauseAudio();
         Director.playableGraph.GetRootPlayable(0).SetSpeed(0);
     }
 
     public void UnPause()
     {
-        _directorCondition = directorCondition.Unpaused;
         if (!Director) return;
+        _directorCondition = directorCondition.Unpaused;
         if (!(stopTimeline._firstTimeLineWasPaused || StopTimeline2._secondTimeLineWasPaused))
         {
+            ResumeAudio();
             Director.playableGraph.GetRootPlayable(0).SetSpeed(1);
         }
     }

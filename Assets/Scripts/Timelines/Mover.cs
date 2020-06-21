@@ -8,11 +8,11 @@ public class Mover : MonoBehaviour
     private List<float> _timingList;
 
     [SerializeField]
-    PlayableDirector _director;
+    private PlayableDirector _director;
 
     private void Start()
     {
-        _timingList = new List<float> { 0, 19.3f,50.3f,87.4f,101.5f,108.5f,120,140.6f};
+        _timingList = new List<float> { 0, 19.3f,50.3f,87.4f,101.5f,6505/60.0f,120,140.6f};
     }
     
     public void NextMove()
@@ -22,11 +22,12 @@ public class Mover : MonoBehaviour
         {
             foreach (var timing in _timingList)
             {
-                if(timing >= dirTime)
+                if(timing > dirTime)
                 {
                     _director.time = timing;
                     if (timing != 120)
                     {
+                        stopTimeline._firstTimeLineWasPaused = false;
                         _director.GetComponent<AudioSource>().Stop();
                         _director.playableGraph.GetRootPlayable(0).SetSpeed(1);
                     }
@@ -40,7 +41,6 @@ public class Mover : MonoBehaviour
         }
     }
 
-
     public void PrevMove()
     {
         var dirTime = _director.time;
@@ -53,12 +53,9 @@ public class Mover : MonoBehaviour
                 _director.time = timing;
                 if (timing != 120)
                 {
+                    stopTimeline._firstTimeLineWasPaused = false;
                     _director.GetComponent<AudioSource>().Stop();
                     _director.playableGraph.GetRootPlayable(0).SetSpeed(1);
-                }
-                else
-                {
-                    _director.playableGraph.GetRootPlayable(0).SetSpeed(0);
                 }
                 break;
             }
