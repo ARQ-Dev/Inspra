@@ -41,7 +41,8 @@ public class VisualizationInstantiator : MonoBehaviour
 
 #if UNITY_EDITOR
         _istantiatedPrefab = Instantiate(_first, Vector3.zero, Quaternion.identity);
-        Instantiaded?.Invoke(_istantiatedPrefab);
+        //Instantiaded?.Invoke(_istantiatedPrefab);
+        StartCoroutine(InstantiatedCor());
 #else
         _positioner.StartPositioning(_first);
 #endif
@@ -52,7 +53,10 @@ public class VisualizationInstantiator : MonoBehaviour
     {
 #if UNITY_EDITOR
         _istantiatedPrefab = Instantiate(_second, Vector3.zero, Quaternion.identity);
-        Instantiaded?.Invoke(_istantiatedPrefab);
+        //Instantiaded?.Invoke(_istantiatedPrefab);
+
+        StartCoroutine(InstantiatedCor());
+
 #else
         _positioner.StartPositioning(_second);
 #endif
@@ -73,4 +77,9 @@ public class VisualizationInstantiator : MonoBehaviour
         Instantiaded?.Invoke(_istantiatedPrefab);
     }
 
+    private IEnumerator InstantiatedCor()
+    {
+        yield return null;
+        Instantiaded?.Invoke(_istantiatedPrefab);
+    }
 }

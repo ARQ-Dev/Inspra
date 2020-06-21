@@ -12,29 +12,27 @@ public class Mover : MonoBehaviour
 
     private void Start()
     {
-        _timingList = new List<float> { 0, 19.3f,50.3f,87.4f,101.5f,6505/60.0f,120,140.6f};
+        _timingList = new List<float> { 3, 19.3f,50.3f,71.7f,108.4f, 118.35f, 129.8f, 151.3f};
     }
     
     public void NextMove()
     {
         var dirTime = _director.time;
-        if (dirTime < 141)
+        if (dirTime < 152)
         {
             foreach (var timing in _timingList)
             {
                 if(timing > dirTime)
                 {
                     _director.time = timing;
-                    if (timing != 120)
-                    {
-                        stopTimeline._firstTimeLineWasPaused = false;
+                    if (timing == 129.8f)
+                        stopTimeline.peremotka = true;
+                    else
+                        stopTimeline.peremotka = false;
+                    stopTimeline._firstTimeLineWasPaused = false;
                         _director.GetComponent<AudioSource>().Stop();
                         _director.playableGraph.GetRootPlayable(0).SetSpeed(1);
-                    }
-                    else
-                    {
-                        _director.playableGraph.GetRootPlayable(0).SetSpeed(0);
-                    }
+                    
                     break;
                 }
             }
@@ -51,12 +49,14 @@ public class Mover : MonoBehaviour
             if(timing< dirTime-2)
             {
                 _director.time = timing;
-                if (timing != 120)
-                {
-                    stopTimeline._firstTimeLineWasPaused = false;
+                if (timing == 129.8f)
+                    stopTimeline.peremotka = true;
+                else
+                    stopTimeline.peremotka = false;
+                stopTimeline._firstTimeLineWasPaused = false;
                     _director.GetComponent<AudioSource>().Stop();
                     _director.playableGraph.GetRootPlayable(0).SetSpeed(1);
-                }
+                
                 break;
             }
         }

@@ -23,9 +23,6 @@ public class PauseController : MonoBehaviour
         Director = GetComponent<PlayableDirector>();
     }
 
-    //пауза останавливает речь -
-    //пауза останавливает анимацию -
-
     void PauseAudio()
     {
         _audioController.PauseAudio();

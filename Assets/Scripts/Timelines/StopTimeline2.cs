@@ -46,8 +46,11 @@ public class StopTimeline2 : MonoBehaviour
 
     public void Pause3()
     {
-        _secondTimeLineWasPaused = true;
-        director.playableGraph.GetRootPlayable(0).SetSpeed(0);
+        if (!_wasPassed)
+        {
+            _secondTimeLineWasPaused = true;
+            director.playableGraph.GetRootPlayable(0).SetSpeed(0);
+        }
     }
    
 
@@ -63,6 +66,11 @@ public class StopTimeline2 : MonoBehaviour
                 CancelInvoke();
             }
         }
+    }
+
+    public void WasPassedTrue()
+    {
+        _wasPassed = true;
     }
 
     public void UnPause()
@@ -90,22 +98,26 @@ public class StopTimeline2 : MonoBehaviour
     public void IfWasPassed()
     {
         _mainAudioSource.Stop();
+        _wasPassed = false;
     }
 
     public void DropRisks()
     {
+        _mainAudioSource.Stop();
         director.time = 169.5f;
         director.playableGraph.GetRootPlayable(0).SetSpeed(1);
     }
 
     public void ReturnInspra()
     {
-        director.time = 142.4f;
+        _mainAudioSource.Stop();
+        director.time = 142.9f;
         director.playableGraph.GetRootPlayable(0).SetSpeed(1);
     }
 
     public void Reasons()
     {
+        _mainAudioSource.Stop();
         director.time = 98;
         director.playableGraph.GetRootPlayable(0).SetSpeed(1);
     }

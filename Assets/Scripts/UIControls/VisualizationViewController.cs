@@ -33,6 +33,9 @@ public class VisualizationViewController : ViewController
     [SerializeField]
     private Timer _timer;
 
+    [SerializeField]
+    private AudioControllerBeforePlaced _audioControllerBeforePlaced;
+
 
     #region MonoBehaviour
 
@@ -118,6 +121,8 @@ public class VisualizationViewController : ViewController
 
     private void OnInstantiated(GameObject go)
     {
+        Debug.Log("here");
         _view.HideActivePopup();
+        _audioControllerBeforePlaced.StopAllStartedSpeech();
     }
 }
