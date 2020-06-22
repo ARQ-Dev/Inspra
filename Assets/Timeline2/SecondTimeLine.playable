@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 77.72628117913827
+    m_Start: 73.50993197278906
     m_ClipIn: 0
     m_Asset: {fileID: -6532571242494964139}
     m_Duration: 28.773401360544284
@@ -110,7 +110,7 @@ MonoBehaviour:
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
     m_PostExtrapolationTime: Infinity
-    m_PreExtrapolationTime: 77.72628117913827
+    m_PreExtrapolationTime: 73.50993197278906
     m_DisplayName: ParticlesAnim
   m_Markers:
     m_Objects: []
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 70.58301587301588
+  m_Time: 66.36666666666667
   m_Retroactive: 1
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: 41c1f617dc612664bba77c93a2c7009c, type: 2}
@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 192.65417233560086
+  m_Time: 188.43782312925165
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: 85bfd18bbb9e01642a22591c6013c919, type: 2}
@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 77.72628117913827
+    m_Start: 73.50993197278906
     m_ClipIn: 0
     m_Asset: {fileID: -4661469014244493944}
     m_Duration: 28.773401360544284
@@ -390,11 +390,11 @@ MonoBehaviour:
     m_Recordable: 0
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
-    m_PostExtrapolationTime: 27.76634920634916
+    m_PostExtrapolationTime: 23.549999999999955
     m_PreExtrapolationTime: 0
     m_DisplayName: UpgradeMaleAnim
   - m_Version: 1
-    m_Start: 176.18301587301582
+    m_Start: 171.9666666666666
     m_ClipIn: 0
     m_Asset: {fileID: -2449353592636057851}
     m_Duration: 16.471156462585043
@@ -515,11 +515,11 @@ MonoBehaviour:
     m_Recordable: 0
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
-    m_PostExtrapolationTime: 27.76634920634916
+    m_PostExtrapolationTime: 23.549999999999955
     m_PreExtrapolationTime: 0
     m_DisplayName: UpgradeFemaleAnim
   - m_Version: 1
-    m_Start: 176.18301587301582
+    m_Start: 171.9666666666666
     m_ClipIn: 0
     m_Asset: {fileID: -1550409136599648360}
     m_Duration: 16.471156462585043
@@ -593,7 +593,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 80.80961451247161
+    m_Start: 76.5932653061224
     m_ClipIn: 0
     m_Asset: {fileID: 6689707733736376482}
     m_Duration: 51.59648526077103
@@ -686,7 +686,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 70.58301587301588
+    m_Start: 66.36666666666667
     m_ClipIn: 0
     m_Asset: {fileID: -8007626653846380808}
     m_Duration: 28.5
@@ -791,7 +791,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 25.02884353741497
+  m_Time: 20.812494331065764
   m_Retroactive: 1
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: d5b202ddd4e1c1742816e0b486f88d5f, type: 2}
@@ -807,7 +807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 90.607052154195
+  m_Time: 86.3907029478458
   m_Retroactive: 1
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: bf3a2e2eb8fe70a4db3f317e822be554, type: 2}
@@ -833,7 +833,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 132.40609977324257
+    m_Start: 128.18975056689337
     m_ClipIn: 0
     m_Asset: {fileID: -4270997022276686102}
     m_Duration: 40.28621315192744
@@ -902,7 +902,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: Active
   - m_Version: 1
-    m_Start: 176.18301587301582
+    m_Start: 171.9666666666666
     m_ClipIn: 0
     m_Asset: {fileID: 935478610000116996}
     m_Duration: 16.471156462585043
@@ -1007,7 +1007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 99.15512471655327
+  m_Time: 94.93877551020407
   m_Retroactive: 1
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: 77edfb9b752e84c4f872f2682aebb854, type: 2}
@@ -1045,7 +1045,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 25.028843537415014
+    m_Start: 20.812494331065807
     m_ClipIn: 0
     m_Asset: {fileID: -577163238243444848}
     m_Duration: 28.737505668934197
@@ -1128,7 +1128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 176.18301587301582
+  m_Time: 171.9666666666666
   m_Retroactive: 1
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: 9a6c938458a89d14cb78639dfd1ecf0f, type: 2}
@@ -1156,7 +1156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 77.49648526077098
+  m_Time: 73.28013605442177
   m_Retroactive: 1
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: 8fd75cecb4de95841bce47a780334200, type: 2}
@@ -1182,7 +1182,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 70.58301587301588
+    m_Start: 66.36666666666667
     m_ClipIn: 0
     m_Asset: {fileID: -177175797613801290}
     m_Duration: 28.53333333333333
@@ -1248,7 +1248,7 @@ MonoBehaviour:
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
     m_PostExtrapolationTime: Infinity
-    m_PreExtrapolationTime: 70.58301587301588
+    m_PreExtrapolationTime: 66.36666666666667
     m_DisplayName: MoleculsAnim
   m_Markers:
     m_Objects: []
@@ -1328,7 +1328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 109.48301587301589
+  m_Time: 105.26666666666668
   m_Retroactive: 1
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: 31ce4ec8283a0fb46a3149f0a6c73b52, type: 2}
@@ -1442,22 +1442,6 @@ MonoBehaviour:
   m_Loop: 2
   m_Version: 1
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
---- !u!114 &-2160022238618348399
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
-  m_Name: Signal Emitter
-  m_EditorClassIdentifier: 
-  m_Time: 2
-  m_Retroactive: 0
-  m_EmitOnce: 0
-  m_Asset: {fileID: 11400000, guid: f160b1f884539214b8a52ec7f481f86f, type: 2}
 --- !u!114 &-1550409136599648360
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1502,7 +1486,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 132.40609977324257
+    m_Start: 128.18975056689337
     m_ClipIn: 0
     m_Asset: {fileID: -3630282703318280208}
     m_Duration: 39.30287981859409
@@ -1550,10 +1534,10 @@ MonoBehaviour:
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
     m_PostExtrapolationTime: 4.4740362811791385
-    m_PreExtrapolationTime: 132.40609977324257
+    m_PreExtrapolationTime: 128.18975056689337
     m_DisplayName: FinalGropupAnim
   - m_Version: 1
-    m_Start: 176.18301587301582
+    m_Start: 171.9666666666666
     m_ClipIn: 0
     m_Asset: {fileID: 1785496780000408851}
     m_Duration: 16.471156462585043
@@ -1635,7 +1619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 104.46761904761902
+  m_Time: 100.25126984126982
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: 7f4a93f17353b404ba3be083a3bf5175, type: 2}
@@ -1661,7 +1645,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 106.49968253968255
+    m_Start: 102.28333333333335
     m_ClipIn: 0
     m_Asset: {fileID: 3083267274310487924}
     m_Duration: 25.90641723356009
@@ -1780,7 +1764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 56.96634920634923
+  m_Time: 52.75000000000003
   m_Retroactive: 1
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: f03491d31c37ad540b6fdf2884fde205, type: 2}
@@ -1883,7 +1867,6 @@ MonoBehaviour:
     - {fileID: 6860235018728567466}
     - {fileID: 6934889100557535592}
     - {fileID: -4428686573961060155}
-    - {fileID: -2160022238618348399}
     - {fileID: 2283843152951745679}
 --- !u!114 &935478610000116996
 MonoBehaviour:
@@ -1922,7 +1905,7 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: 4904279397572356628}
-    m_Duration: 172.6
+    m_Duration: 168.16666666666666
     m_TimeScale: 1
     m_ParentTrack: {fileID: 1271501794653293900}
     m_EaseInDuration: 0
@@ -1984,11 +1967,11 @@ MonoBehaviour:
     m_Recordable: 0
     m_PostExtrapolationMode: 0
     m_PreExtrapolationMode: 1
-    m_PostExtrapolationTime: 3.5830158730158246
+    m_PostExtrapolationTime: 3.799999999999983
     m_PreExtrapolationTime: 0
     m_DisplayName: CanvasAnim
   - m_Version: 1
-    m_Start: 176.18301587301582
+    m_Start: 171.96666666666664
     m_ClipIn: 0
     m_Asset: {fileID: -2247450779011907480}
     m_Duration: 16.471156462585014
@@ -2054,7 +2037,7 @@ MonoBehaviour:
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
     m_PostExtrapolationTime: Infinity
-    m_PreExtrapolationTime: 3.5830158730158246
+    m_PreExtrapolationTime: 3.799999999999983
     m_DisplayName: FindalGroupCanvasAnim
   m_Markers:
     m_Objects: []
@@ -2088,7 +2071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 122.9493650793651
+  m_Time: 118.73301587301589
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: 4f3702f3975c7d948b9cd1a7de5de1b6, type: 2}
@@ -2126,7 +2109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 174.41666666666666
+  m_Time: 170.20031746031745
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: 588d8daf22aa02c4bbeff43bb0a0c0f8, type: 2}
@@ -2152,7 +2135,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 80.80961451247161
+    m_Start: 76.5932653061224
     m_ClipIn: 0
     m_Asset: {fileID: 6257798343582845951}
     m_Duration: 51.59648526077103
@@ -2218,7 +2201,7 @@ MonoBehaviour:
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
     m_PostExtrapolationTime: Infinity
-    m_PreExtrapolationTime: 80.80961451247161
+    m_PreExtrapolationTime: 76.5932653061224
     m_DisplayName: InteractionAnim
   m_Markers:
     m_Objects: []
@@ -2274,7 +2257,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 25.028843537415014
+    m_Start: 20.812494331065807
     m_ClipIn: 0
     m_Asset: {fileID: -2277867658938943277}
     m_Duration: 28.737505668934197
@@ -2322,7 +2305,7 @@ MonoBehaviour:
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
     m_PostExtrapolationTime: Infinity
-    m_PreExtrapolationTime: 25.028843537415014
+    m_PreExtrapolationTime: 20.812494331065807
     m_DisplayName: IssuesAnim
   m_Markers:
     m_Objects: []
@@ -2356,7 +2339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 171.70897959183668
+  m_Time: 167.49263038548747
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: 85bfd18bbb9e01642a22591c6013c919, type: 2}
@@ -2372,7 +2355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 6.216349206349207
+  m_Time: 2
   m_Retroactive: 1
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: 62ac2d419ed00d8449f64274a2d1311d, type: 2}
@@ -2454,7 +2437,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 106.49968253968255
+    m_Start: 102.28333333333335
     m_ClipIn: 0
     m_Asset: {fileID: -8808120336025110852}
     m_Duration: 16.44968253968254
@@ -2520,10 +2503,10 @@ MonoBehaviour:
     m_PostExtrapolationMode: 0
     m_PreExtrapolationMode: 1
     m_PostExtrapolationTime: 6.456734693877564
-    m_PreExtrapolationTime: 106.49968253968255
+    m_PreExtrapolationTime: 102.28333333333335
     m_DisplayName: ModelsAnim
   - m_Version: 1
-    m_Start: 129.40609977324266
+    m_Start: 125.18975056689345
     m_ClipIn: 0
     m_Asset: {fileID: -4809824635271245082}
     m_Duration: 3.000000000000014
@@ -2645,7 +2628,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 102.46761904761904
+    m_Start: 98.25126984126983
     m_ClipIn: 0
     m_Asset: {fileID: -7985391370045018731}
     m_Duration: 29.938480725623606
@@ -2728,7 +2711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 132.40609977324257
+  m_Time: 128.18975056689337
   m_Retroactive: 1
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: 9a6c938458a89d14cb78639dfd1ecf0f, type: 2}
@@ -2744,7 +2727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
   m_Name: Signal Emitter
   m_EditorClassIdentifier: 
-  m_Time: 149.01666666666668
+  m_Time: 144.80031746031747
   m_Retroactive: 1
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: c5bfe73618760bd46ad094bfb1f8d2d0, type: 2}
@@ -2770,7 +2753,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 109.48301587301589
+    m_Start: 105.26666666666668
     m_ClipIn: 0
     m_Asset: {fileID: -2169225686262010912}
     m_Duration: 22.923083900226757
@@ -2836,7 +2819,7 @@ MonoBehaviour:
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
     m_PostExtrapolationTime: Infinity
-    m_PreExtrapolationTime: 109.48301587301589
+    m_PreExtrapolationTime: 105.26666666666668
     m_DisplayName: SchemasAnim
   m_Markers:
     m_Objects: []
@@ -2903,7 +2886,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 109.48301587301589
+    m_Start: 105.26666666666668
     m_ClipIn: 0
     m_Asset: {fileID: 4975393862285380816}
     m_Duration: 22.923083900226757
@@ -2996,7 +2979,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 102.46761904761904
+    m_Start: 98.25126984126983
     m_ClipIn: 0
     m_Asset: {fileID: -2604298908118139870}
     m_Duration: 29.938480725623606
@@ -3062,7 +3045,7 @@ MonoBehaviour:
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
     m_PostExtrapolationTime: Infinity
-    m_PreExtrapolationTime: 102.46761904761904
+    m_PreExtrapolationTime: 98.25126984126983
     m_DisplayName: ReasonsAndFeaturesAnim
   m_Markers:
     m_Objects: []

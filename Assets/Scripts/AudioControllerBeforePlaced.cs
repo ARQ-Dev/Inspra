@@ -4,16 +4,11 @@ using UnityEngine;
 
 public class AudioControllerBeforePlaced : MonoBehaviour
 {
-    [SerializeField]
-    private AudioSource _audioSourceBeforePlaced;
-
-    [SerializeField]
-    private AudioClip[] _audioClips;
-
     private AudioSource[] allAudioSources;
-
     [SerializeField]
-    private Animator _headersBeforePlaced;
+    private AudioClip clipBeforePlaced;
+    [SerializeField]
+    private AudioSource _mainAS;
 
     public void OffAllAudio()
     {
@@ -39,45 +34,17 @@ public class AudioControllerBeforePlaced : MonoBehaviour
                 
         }
     }
-    public void PlayClipsFirstScene()
+
+    public void PlayBeforePlaced()
     {
-        _headersBeforePlaced.gameObject.SetActive(true);
-        StartCoroutine(ForFirstScene());
+        _mainAS.Stop();
+        _mainAS.clip = clipBeforePlaced;
+        _mainAS.Play();
     }
 
-    IEnumerator ForFirstScene()
+    public void StopAfterPlaced()
     {
-        _audioSourceBeforePlaced.Stop();
-        _audioSourceBeforePlaced.clip = _audioClips[0];
-        _audioSourceBeforePlaced.Play();
-        _headersBeforePlaced.Play("PlayFirstHeader");
-        yield return new WaitForSeconds(_audioSourceBeforePlaced.clip.length);
-        _audioSourceBeforePlaced.clip = _audioClips[1];
-        _audioSourceBeforePlaced.Play();
+        _mainAS.Stop();
     }
 
-    public void StopAllStartedSpeech()
-    {
-        StopAllCoroutines();
-        _audioSourceBeforePlaced.Stop();
-        _headersBeforePlaced.gameObject.SetActive(false);
-        foreach (Transform child in _headersBeforePlaced.gameObject.transform)
-        {
-            child.gameObject.SetActive(false);
-        }
-    }
-    
-    public void PlayClipsSecondScene()
-    {
-        _headersBeforePlaced.gameObject.SetActive(true);
-        StartCoroutine(ForSecondScene());
-    }
-    IEnumerator ForSecondScene()
-    {
-        _headersBeforePlaced.Play("PlaySecondHeader");
-        _audioSourceBeforePlaced.Stop();
-        yield return new WaitForSeconds(2);
-          _audioSourceBeforePlaced.clip = _audioClips[3];
-        _audioSourceBeforePlaced.Play();
-    }
 }
