@@ -80,7 +80,7 @@ public class StopTimeline2 : MonoBehaviour
                 CancelInvoke();
                 _speechCounter = 0;
             }
-            if (director.time > 120 && director.time<130)
+            if (director.time > 115 && director.time<125)
             {
                 _mainAudioSource.clip = _speechAfterButton2;
                 _mainAudioSource.Play();
@@ -98,21 +98,21 @@ public class StopTimeline2 : MonoBehaviour
     public void DropRisks()
     {
         _mainAudioSource.Stop();
-        director.time = 176.2f;
+        director.time = 171.8f;
         director.playableGraph.GetRootPlayable(0).SetSpeed(1);
     }
 
     public void ReturnInspra()
     {
         _mainAudioSource.Stop();
-        director.time = 149;
+        director.time = 144.5f;
         director.playableGraph.GetRootPlayable(0).SetSpeed(1);
     }
 
     public void Reasons()
     {
         _mainAudioSource.Stop();
-        director.time = 104.1f;
+        director.time = 100;
         director.playableGraph.GetRootPlayable(0).SetSpeed(1);
     }
 }

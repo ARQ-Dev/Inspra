@@ -81,9 +81,9 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _halfSize: {r: 576.1354, g: 1120, b: 0, a: 0}
+    - _halfSize: {r: 432.10156, g: 1105, b: 0, a: 0}
     - _r: {r: 20, g: 20, b: 0, a: 0}
-    - _rect2props: {r: 0.000061035156, g: -10.000122, b: 1192.2778, a: 1192.2778}
+    - _rect2props: {r: 0.000061035156, g: -10.000244, b: 1079.824, a: 1079.824}
 --- !u!114 &8298156197165776381
 MonoBehaviour:
   m_ObjectHideFlags: 11
