@@ -9,7 +9,6 @@ public class AudioController : MonoBehaviour
     [SerializeField]
     private AudioClip[] _audioClips;
 
-
     public void PauseAudio()
     {
         _audioSource.Pause();
