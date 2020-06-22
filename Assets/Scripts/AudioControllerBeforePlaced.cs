@@ -5,9 +5,9 @@ using UnityEngine;
 public class AudioControllerBeforePlaced : MonoBehaviour
 {
     private AudioSource[] allAudioSources;
-
+    [SerializeField]
     private AudioClip clipBeforePlaced;
-
+    [SerializeField]
     private AudioSource _mainAS;
 
     public void OffAllAudio()

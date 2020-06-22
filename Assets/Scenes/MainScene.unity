@@ -787,6 +787,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0d64c9bd3f49364bb92430a94a6c60a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clipBeforePlaced: {fileID: 8300000, guid: 0e692209fa1a4a9498d45ba94ade8e8e, type: 3}
+  _mainAS: {fileID: 343263436}
 --- !u!82 &343263436
 AudioSource:
   m_ObjectHideFlags: 0
