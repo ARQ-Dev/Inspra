@@ -15,7 +15,7 @@ public class AudioControllerBeforePlaced : MonoBehaviour
         allAudioSources = FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
         foreach (AudioSource audioS in allAudioSources)
         {
-            if (audioS.isPlaying)
+            
                 audioS.volume = 0;
         }
     }
@@ -24,13 +24,13 @@ public class AudioControllerBeforePlaced : MonoBehaviour
         allAudioSources = FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
         foreach (AudioSource audioS in allAudioSources)
         {
-            if (audioS.isPlaying)
-            {
+            
+            
                 if(audioS.clip.name == "Cardio_music")
                     audioS.volume = 0.1f;
                 else
                     audioS.volume = 1;
-            }
+            
                 
         }
     }
