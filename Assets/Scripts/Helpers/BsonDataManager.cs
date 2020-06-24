@@ -6,7 +6,7 @@ public static class BsonDataManager
 {
     public static T ReadData<T>(string path) where T: class
     {
-        //if (!File.Exists(path)) return null;
+        if (!File.Exists(path)) return null;
 
         //var json = File.ReadAllText(path);
         //return JsonConvert.DeserializeObject<T>(json);
