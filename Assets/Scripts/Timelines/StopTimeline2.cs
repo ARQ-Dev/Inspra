@@ -116,7 +116,7 @@ public class StopTimeline2 : MonoBehaviour
     public void Reasons()
     {
         _mainAudioSource.Stop();
-        director.time = 100;
+        director.time = 99;
         director.playableGraph.GetRootPlayable(0).SetSpeed(1);
     }
 }
