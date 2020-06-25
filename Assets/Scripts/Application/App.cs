@@ -101,6 +101,7 @@ public class App : MonoBehaviour
         NetworkManager.Instance.Login(userData,
             (e, n) =>
             {
+                print($"Error nombber: {n}, message: {e}");
                 _login.FailedLogin();
             },
             () =>

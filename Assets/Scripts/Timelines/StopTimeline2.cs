@@ -13,7 +13,7 @@ public class StopTimeline2 : MonoBehaviour
     [SerializeField]
     private AudioSource _mainAudioSource;
     private bool _wasPassed1 = false;
-
+    public Animator ButtonAnimator;
 
     PauseController _pauseController;
     private int _speechCounter=0;
@@ -25,25 +25,27 @@ public class StopTimeline2 : MonoBehaviour
 
     public void Pause1()
     {
-        
-            InvokeRepeating("PlaySpeechBeforeButton", 0, 12.5f);
-            _secondTimeLineWasPaused = true;
-            director.playableGraph.GetRootPlayable(0).SetSpeed(0);
-        
+        ButtonAnimator.ResetTrigger("nothing");
+        InvokeRepeating("PlaySpeechBeforeButton", 0, 12.5f);
+        _secondTimeLineWasPaused = true;
+        director.playableGraph.GetRootPlayable(0).SetSpeed(0);
+        ButtonAnimator.Play("ReasonsAndFeaturesFlashing");
     }
 
     public void Pause2()
     {
+        ButtonAnimator.ResetTrigger("nothing");
         _secondTimeLineWasPaused = true;
         director.playableGraph.GetRootPlayable(0).SetSpeed(0);
         Models.Play("ModelsIdle");
+        ButtonAnimator.Play("ReasonsAndFeaturesFlashing");
     }
 
     public void Pause3()
     {
         
-            _secondTimeLineWasPaused = true;
-            director.playableGraph.GetRootPlayable(0).SetSpeed(0);
+        _secondTimeLineWasPaused = true;
+        director.playableGraph.GetRootPlayable(0).SetSpeed(0);
         
     }
    
@@ -73,11 +75,11 @@ public class StopTimeline2 : MonoBehaviour
     {
         if (!_pauseController.TimelineWasPaused())
         {
+            CancelInvoke();
             _mainAudioSource.Stop();
             _secondTimeLineWasPaused = false;
             if (director.time < 110)
             {
-                CancelInvoke();
                 _speechCounter = 0;
             }
             if (director.time > 115 && director.time<125)
@@ -86,6 +88,8 @@ public class StopTimeline2 : MonoBehaviour
                 _mainAudioSource.Play();
             }
             director.playableGraph.GetRootPlayable(0).SetSpeed(1);
+            ButtonAnimator.SetTrigger("nothing");
+
         }
     }
 

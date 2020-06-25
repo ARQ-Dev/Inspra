@@ -39,7 +39,7 @@ public class stopTimeline : MonoBehaviour
     {
         if (!_pauseController.TimelineWasPaused())
         {
-            CancelInvoke();
+            CancelInvoke("PlaySpeech");
             _speechCounter = 0;
             _firstTimeLineWasPaused = false;
             _mainAudioSource.Stop();
@@ -51,13 +51,12 @@ public class stopTimeline : MonoBehaviour
 
     public void Pause()
     {
+        Solve.Play("SolveProblemAppearing");
         _mainAudioSource.Stop();
         director.playableGraph.GetRootPlayable(0).SetSpeed(0);
-            InvokeRepeating("PlaySpeech", 2, 12.5f);
-            Level.Play("IndicatorFlash");
-            Male.Play("MaleFlash");
-            _firstTimeLineWasPaused = true;
-            Solve.Play("SolveProblemAppearing");
-        
+        InvokeRepeating("PlaySpeech", 2, 12.5f);
+        Level.Play("IndicatorFlash");
+        Male.Play("MaleFlash");
+        _firstTimeLineWasPaused = true;
     }
 }

@@ -17,14 +17,14 @@ public class Mover : MonoBehaviour
 
     private void Start()
     {
-        _timingList = new List<float> { 0, 23.5f, 54.52f, 93.589410430839f, 112.55253968254f, 122.489410430839f, 133.96537414966f, 155.439410430839f };
+        _timingList = new List<float> { 0, 23.5f, 54.52f, 93.589410430839f, 112.55253968254f, 122.489410430839f, 137, 153};
     }
     
     public void NextMove()
     {
         
         var dirTime = _director.time;
-        if (dirTime < 156)
+        if (dirTime < 159)
         {
             foreach (var timing in _timingList)
             {
