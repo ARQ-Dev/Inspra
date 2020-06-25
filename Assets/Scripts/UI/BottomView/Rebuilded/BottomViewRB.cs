@@ -62,7 +62,6 @@ namespace ARQ.UI
         }
         private void Start()
         {
-            Debug.Log(_rootTransform.rect);
             SetCurrentPosition();
         }
         #endregion

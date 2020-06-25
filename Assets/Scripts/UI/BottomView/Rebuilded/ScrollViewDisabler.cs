@@ -13,6 +13,13 @@ namespace ARQ.UI
         {
             _bottomView = GetComponentInParent<BottomViewRB>();
             _bottomView.OnExpand += HandleExpand;
+            _bottomView.OnHide += HandleHiding;
+        }
+
+        private void HandleHiding()
+        {
+            _scrollRect.verticalScrollbar.value = 1f;
+            _scrollRect.verticalScrollbar.onValueChanged.Invoke(1f);
         }
 
         private void HandleExpand()
