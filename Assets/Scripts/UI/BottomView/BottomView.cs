@@ -4,7 +4,7 @@ using DG.Tweening;
 using System;
 using UnityEngine.UI;
 
-namespace ARQ.UIKit
+namespace ARQ.UI
 {
     public class BottomView : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ARQ.UIKit {
+namespace ARQ.UI {
     public class BottomViewInvoker : MonoBehaviour
     {
         [SerializeField]

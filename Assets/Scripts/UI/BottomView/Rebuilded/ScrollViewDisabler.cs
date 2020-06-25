@@ -1,18 +1,18 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace ARQ.UIKit
+namespace ARQ.UI
 {
     public class ScrollViewDisabler : MonoBehaviour
     {
-        private BottomView _bottomView;
+        private BottomViewRB _bottomView;
         [SerializeField]
         private ScrollRect _scrollRect;
 
         private void Awake()
         {
-            _bottomView = GetComponentInParent<BottomView>();
-            _bottomView.OnExpanded += HandleExpand;
+            _bottomView = GetComponentInParent<BottomViewRB>();
+            _bottomView.OnExpand += HandleExpand;
         }
 
         private void HandleExpand()

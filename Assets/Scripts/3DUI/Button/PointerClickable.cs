@@ -2,7 +2,7 @@
 using UnityEngine;
 using System;
 
-namespace ARQ.UIKit.TD
+namespace ARQ.UI.TD
 {
     public class PointerClickable : MonoBehaviour, IPointerClickHandler
     {

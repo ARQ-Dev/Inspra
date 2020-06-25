@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ARQ.UIKit.TD 
+namespace ARQ.UI.TD 
 {
     [ExecuteInEditMode]
     public class SpatialText : MonoBehaviour
