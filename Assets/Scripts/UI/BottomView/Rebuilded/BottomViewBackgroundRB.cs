@@ -5,7 +5,7 @@ using DG.Tweening;
 namespace ARQ.UI
 {
     [RequireComponent(typeof(Image))]
-    public class BottomViewBackground : MonoBehaviour
+    public class BottomViewBackgroundRB : MonoBehaviour
     {
         [SerializeField]
         private Color _shownColor;
