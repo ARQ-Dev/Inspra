@@ -10,13 +10,18 @@ public abstract class ViewController : MonoBehaviour
 
     public void Open()
     {
+
+        if (_panelController == null)
+            _panelController = FindObjectOfType<EFE_Base>();
+
         _panelController.OpenPanel(gameObject);
         OnOpened();
     }
 
     protected void Awake()
     {
-        _panelController = FindObjectOfType<EFE_Base>();
+        if (_panelController == null)
+            _panelController = FindObjectOfType<EFE_Base>();
     }
 
     #endregion
