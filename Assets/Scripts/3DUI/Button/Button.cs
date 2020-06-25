@@ -4,7 +4,7 @@ using UnityEngine.Events;
 using UnityEngine;
 using System;
 
-namespace ARQ.UIKit.TD
+namespace ARQ.UI.TD
 {       
     [Serializable]
     public class ButtonClickEvent : UnityEvent { }

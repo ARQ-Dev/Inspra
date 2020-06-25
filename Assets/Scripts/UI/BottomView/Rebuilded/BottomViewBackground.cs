@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using DG.Tweening;
 
-namespace ARQ.UIKit
+namespace ARQ.UI
 {
     [RequireComponent(typeof(Image))]
     public class BottomViewBackground : MonoBehaviour
@@ -12,11 +12,11 @@ namespace ARQ.UIKit
         [SerializeField]
         private Color _hidenColor;
 
-        private BottomView _bottomView;
+        private BottomViewRB _bottomView;
 
         private void Awake()
         {
-            _bottomView = GetComponentInChildren<BottomView>();
+            _bottomView = GetComponentInChildren<BottomViewRB>();
             _bottomView.OnHalfShowSmooth += HandleHalfShowingShooth;
             _bottomView.OnHideSmooth += HandleHidingSmooth;
             _bottomView.OnHalfShow += HandleShowing;
