@@ -59,6 +59,8 @@ public class VisualizationViewController : ViewController
         _planeManager.enabled = true;
         _timelineController.Director = director;
 
+        _view.ActivateUI(false);
+
     }
 
     private void OnDisable()
@@ -81,6 +83,7 @@ public class VisualizationViewController : ViewController
 
     private void OnBackTapped()
     {
+        _view.ActivateUI(false);
         _usageTrackingManager.SessionEnded();
         _istantiator.DeleteInstantiatedPrefab();
         Present(_nextViewController);
@@ -105,12 +108,7 @@ public class VisualizationViewController : ViewController
     {
 
 #if !UNITY_EDITOR
-
-        //if (gameObject.activeInHierarchy)
-        //    StartCoroutine(PlaneDetected(isPlaneDetected));
-
         _view.ActivateHint(!isPlaneDetected);
-        _view.ActivateUI(isPlaneDetected);
         if (isPlaneDetected)
             _view.PresentPopup();
 #endif
@@ -121,6 +119,7 @@ public class VisualizationViewController : ViewController
     private void OnInstantiated(GameObject go)
     {
         _view.HideActivePopup();
+        _view.ActivateUI(true);
         audioControllerBeforePlaced.StopAfterPlaced();
     }
 }

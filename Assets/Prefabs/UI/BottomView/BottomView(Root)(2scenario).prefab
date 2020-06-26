@@ -107,7 +107,7 @@ MonoBehaviour:
   _viewID: 0
   _rootTransform: {fileID: 5150666932638161333}
   _expandedRatio: 0
-  _shownRatio: -0.6
+  _shownRatio: -0.5
   _hidenRatio: -1
   _relatedButtons:
   - {fileID: 6293811021790654195}

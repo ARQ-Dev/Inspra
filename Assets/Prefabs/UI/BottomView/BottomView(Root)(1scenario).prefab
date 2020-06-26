@@ -2049,7 +2049,7 @@ MonoBehaviour:
   _viewID: 0
   _rootTransform: {fileID: 7570856888200350145}
   _expandedRatio: 0
-  _shownRatio: -0.6
+  _shownRatio: -0.5
   _hidenRatio: -1
   _relatedButtons:
   - {fileID: 8733559073015529095}
