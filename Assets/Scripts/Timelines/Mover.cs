@@ -11,6 +11,9 @@ public class Mover : MonoBehaviour
     private PlayableDirector _director;
 
     [SerializeField]
+    private stopTimeline _ControllerTimeLine;
+
+    [SerializeField]
     private GameObject Button1;
     [SerializeField]
     private GameObject Button2;
@@ -36,10 +39,10 @@ public class Mover : MonoBehaviour
                         Button2.SetActive(false);
                     }
                     _director.time = timing;
-                        stopTimeline._firstTimeLineWasPaused = false;
-                        _director.GetComponent<AudioSource>().Stop();
-                        _director.playableGraph.GetRootPlayable(0).SetSpeed(1);
-                    
+                    stopTimeline._firstTimeLineWasPaused = false;
+                    _director.GetComponent<AudioSource>().Stop();
+                    _director.playableGraph.GetRootPlayable(0).SetSpeed(1);
+                    _ControllerTimeLine.CancelInvoke();
                     break;
                 }
             }
@@ -62,9 +65,9 @@ public class Mover : MonoBehaviour
                     Button2.SetActive(false);
                 }
                 stopTimeline._firstTimeLineWasPaused = false;
-                    _director.GetComponent<AudioSource>().Stop();
-                    _director.playableGraph.GetRootPlayable(0).SetSpeed(1);
-                
+                _director.GetComponent<AudioSource>().Stop();
+                _director.playableGraph.GetRootPlayable(0).SetSpeed(1);
+                _ControllerTimeLine.CancelInvoke();
                 break;
             }
         }

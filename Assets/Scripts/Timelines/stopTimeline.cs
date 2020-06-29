@@ -39,7 +39,7 @@ public class stopTimeline : MonoBehaviour
     {
         if (!_pauseController.TimelineWasPaused())
         {
-            CancelInvoke("PlaySpeech");
+            CancelInvoke();
             _speechCounter = 0;
             _firstTimeLineWasPaused = false;
             _mainAudioSource.Stop();
