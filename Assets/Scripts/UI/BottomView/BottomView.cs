@@ -103,7 +103,7 @@ namespace ARQ.UI
         public void OnEndDrag(PointerEventData eventData)
         {
             var y = _rectTransform.anchoredPosition.y;
-            if (y < (_shownPosition.y - 300))
+            if (y < (_shownPosition.y + 300))
             {
                 //HideSmooth();
                 foreach (var but in _relatedButtons)
@@ -111,7 +111,7 @@ namespace ARQ.UI
                     but.onClick.Invoke();
                 }
             }
-            else if (y > (_shownPosition.y + 100))
+            else if (y > (_shownPosition.y - 100))
             {
                 ExpandSmooth();
             }
