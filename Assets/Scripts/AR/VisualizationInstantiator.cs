@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using ARQ.AR.Positioning;
 using System;
+using UnityEngine.XR.ARFoundation;
 
 public class VisualizationInstantiator : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class VisualizationInstantiator : MonoBehaviour
 
     public event Action<GameObject> Instantiaded;
 
+    [SerializeField]
+    private ARSession _arSession;
 
     #region MonoEhaviour
 
@@ -44,7 +47,10 @@ public class VisualizationInstantiator : MonoBehaviour
         //Instantiaded?.Invoke(_istantiatedPrefab);
         StartCoroutine(InstantiatedCor());
 #else
-        _positioner.StartPositioning(_first);
+        
+        
+            _positioner.StartPositioning(_first);
+        
 #endif
 
     }
@@ -58,10 +64,13 @@ public class VisualizationInstantiator : MonoBehaviour
         StartCoroutine(InstantiatedCor());
 
 #else
-        _positioner.StartPositioning(_second);
+        
+            _positioner.StartPositioning(_second);
+        
 #endif
     }
 
+    
     public void DeleteInstantiatedPrefab()
     {
         if (_istantiatedPrefab == null) return;
