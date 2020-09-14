@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-
+using UnityEngine.XR.ARFoundation;
 public class App : MonoBehaviour
 {
     #region SerializeFields
@@ -25,6 +25,15 @@ public class App : MonoBehaviour
     [SerializeField]
     private UsageTrackingManager _usageTrackingManager;
 
+    [SerializeField]
+    private ARSession _arSession;
+
+    [SerializeField]
+    private List<GameObject> _arRelatedGos;
+
+    [SerializeField]
+    private List<GameObject> _ordinaryGos;
+
     #endregion
 
     private const string TOKENS_STORAGE_FILENAME = "tokens-storage";
@@ -46,6 +55,8 @@ public class App : MonoBehaviour
 
     private void Awake()
     {
+        StartCoroutine(CheckAvailability());
+
         _usageTrackingManager.AcceptableBackgroundTime = _acceptableBackgroundTime;
 
         var tokensPath = Path.Combine(Application.persistentDataPath, TOKENS_STORAGE_FILENAME);
@@ -61,7 +72,16 @@ public class App : MonoBehaviour
         NetworkManager.Instance.Authorization(
             (e, r) =>
             {
-                _login.Open();
+                if (r == 0)
+                {
+                    _choice.Open();
+                    UsageTrackingManager.Instance.GrabReports();
+                }
+                else
+                {
+                    _login.Open();
+                }
+
             },
             () =>
             {
@@ -101,7 +121,7 @@ public class App : MonoBehaviour
         NetworkManager.Instance.Login(userData,
             (e, n) =>
             {
-                print($"Error nombber: {n}, message: {e}");
+                print($"Error nober: {n}, message: {e}");
                 _login.FailedLogin();
             },
             () =>
@@ -113,6 +133,39 @@ public class App : MonoBehaviour
 
                 UsageTrackingManager.Instance.GrabReports();
             });
+    }
+
+    private IEnumerator CheckAvailability()
+    {
+        if ((ARSession.state == ARSessionState.None) ||
+          (ARSession.state == ARSessionState.CheckingAvailability))
+        {
+            yield return ARSession.CheckAvailability();
+        }
+
+        if (ARSession.state == ARSessionState.Unsupported)
+        {
+            foreach (GameObject go in _ordinaryGos)
+                go.SetActive(true);
+
+            foreach (GameObject go in _arRelatedGos)
+                go.SetActive(false);
+
+            _visualizationInstantiator.IsARAvailable = false;
+        }
+        else
+        {
+            _arSession.enabled = true;
+
+            foreach (GameObject go in _ordinaryGos)
+                go.SetActive(false);
+
+            foreach (GameObject go in _arRelatedGos)
+                go.SetActive(true);
+
+            _visualizationInstantiator.IsARAvailable = true;
+        }
+
     }
 
     #endregion
