@@ -37,9 +37,12 @@ public class AudioControllerBeforePlaced : MonoBehaviour
 
     public void PlayBeforePlaced()
     {
-        _mainAS.Stop();
-        _mainAS.clip = clipBeforePlaced;
-        _mainAS.Play();
+        if (App.Instance.IsARAvailable)
+        {
+            _mainAS.Stop();
+            _mainAS.clip = clipBeforePlaced;
+            _mainAS.Play();
+        }
     }
 
     public void StopAfterPlaced()
