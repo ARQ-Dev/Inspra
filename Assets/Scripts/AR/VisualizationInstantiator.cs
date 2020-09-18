@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using ARQ.AR.Positioning;
 using System;
-using ARQ.AR.Positioning;
 
 public class VisualizationInstantiator : MonoBehaviour
 {

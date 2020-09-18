@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using UnityEngine.XR.ARFoundation;
-public class App : MonoBehaviour
+public class App : Singleton<App>
 {
     #region SerializeFields
 
@@ -34,6 +34,7 @@ public class App : MonoBehaviour
     [SerializeField]
     private List<GameObject> _ordinaryGos;
 
+    public bool IsARAvailable { get; private set; } = true;
     #endregion
 
     private const string TOKENS_STORAGE_FILENAME = "tokens-storage";
@@ -72,7 +73,7 @@ public class App : MonoBehaviour
         NetworkManager.Instance.Authorization(
             (e, r) =>
             {
-                if (r == 0)
+                if (r == 0 || r >= 500)
                 {
                     _choice.Open();
                     UsageTrackingManager.Instance.GrabReports();
@@ -152,6 +153,7 @@ public class App : MonoBehaviour
                 go.SetActive(false);
 
             _visualizationInstantiator.IsARAvailable = false;
+            IsARAvailable = false;
         }
         else
         {
@@ -164,6 +166,7 @@ public class App : MonoBehaviour
                 go.SetActive(true);
 
             _visualizationInstantiator.IsARAvailable = true;
+            IsARAvailable = true;
         }
 
     }

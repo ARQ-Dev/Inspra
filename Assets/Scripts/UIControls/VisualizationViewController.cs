@@ -106,7 +106,8 @@ public class VisualizationViewController : ViewController
 
     private void OnPlaneDetected(bool isPlaneDetected)
     {
-
+        if (!App.Instance.IsARAvailable)
+            return;
 #if !UNITY_EDITOR
         _view.ActivateHint(!isPlaneDetected);
         if (isPlaneDetected)
