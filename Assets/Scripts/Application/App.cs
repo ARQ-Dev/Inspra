@@ -159,11 +159,11 @@ public class App : Singleton<App>
         {
             _arSession.enabled = true;
 
-            foreach (GameObject go in _ordinaryGos)
+           foreach (GameObject go in _ordinaryGos)
                 go.SetActive(false);
 
             foreach (GameObject go in _arRelatedGos)
-                go.SetActive(true);
+               go.SetActive(true);
 
             _visualizationInstantiator.IsARAvailable = true;
             IsARAvailable = true;

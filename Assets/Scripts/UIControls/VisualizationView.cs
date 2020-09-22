@@ -26,9 +26,10 @@ public class VisualizationView : MonoBehaviour
     private void OnEnable()
     {
 
-#if UNITY_EDITOR
-        _hintView.SetActive(false);
-#endif
+//#if UNITY_EDITOR
+        if(!App.Instance.IsARAvailable)
+            _hintView.SetActive(false);
+//#endif
 
     }
 
