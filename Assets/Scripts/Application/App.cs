@@ -34,7 +34,7 @@ public class App : Singleton<App>
     [SerializeField]
     private List<GameObject> _ordinaryGos;
 
-    public bool IsARAvailable { get; private set; } = true;
+    public bool IsARAvailable { get;  set; } = true;
     #endregion
 
     private const string TOKENS_STORAGE_FILENAME = "tokens-storage";
@@ -154,6 +154,7 @@ public class App : Singleton<App>
 
             _visualizationInstantiator.IsARAvailable = false;
             IsARAvailable = false;
+            _choice.DisableChoiseRegimeButton();
         }
         else
         {
