@@ -8,5 +8,17 @@ public class Visualization : MonoBehaviour
     [SerializeField]
     private int _number;
 
+    [SerializeField]
+    private AudioSource _backgroundMusicSource;
+
+    public event Action StartCloseAnim;
+
+    public void OnStartClose()
+    {
+        StartCloseAnim?.Invoke();
+        _backgroundMusicSource.Stop();
+    }
+
+
     public int Number { get { return _number; } }
 }

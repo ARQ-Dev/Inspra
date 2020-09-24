@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 26003832}
   - component: {fileID: 26003831}
   - component: {fileID: 26003830}
+  - component: {fileID: 26003833}
   m_Layer: 5
   m_Name: Close
   m_TagString: Untagged
@@ -273,6 +274,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 26003828}
   m_CullTransparentMesh: 0
+--- !u!95 &26003833
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26003828}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 522303ad64578ce48b2f128a0da8c539, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &53713008
 GameObject:
   m_ObjectHideFlags: 0
@@ -5740,6 +5760,7 @@ GameObject:
   - component: {fileID: 198221881}
   - component: {fileID: 198221882}
   - component: {fileID: 4428499410250839083}
+  - component: {fileID: 4428499410250839084}
   m_Layer: 5
   m_Name: Main Panel
   m_TagString: Untagged
@@ -5767,6 +5788,19 @@ MonoBehaviour:
   transitionFadePanel: {fileID: 0}
   efe_base: {fileID: 0}
   efe_base_comp: {fileID: 0}
+--- !u!114 &4428499410250839084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4428499410250839082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec16559cc2779dd478e23fdd69a98bdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _closeAnimator: {fileID: 26003833}
 --- !u!222 &4428499410296355508
 CanvasRenderer:
   m_ObjectHideFlags: 0

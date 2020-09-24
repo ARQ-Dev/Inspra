@@ -96,7 +96,7 @@ public class ChoiceViewController : ViewController
         foreach (GameObject go in _arRelatedGos)
             go.SetActive(isAR);
 
-        _arSession.enabled = isAR;
+        //_arSession.enabled = isAR;
         _visualizationInstantiator.IsARAvailable = isAR;
         App.Instance.IsARAvailable = isAR;
     }

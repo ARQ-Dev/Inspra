@@ -25,20 +25,29 @@ public class StopTimeline2 : MonoBehaviour
 
     public void Pause1()
     {
-        ButtonAnimator.ResetTrigger("nothing");
-        InvokeRepeating("PlaySpeechBeforeButton", 0, 12.5f);
-        _secondTimeLineWasPaused = true;
-        director.playableGraph.GetRootPlayable(0).SetSpeed(0);
-        ButtonAnimator.Play("ReasonsAndFeaturesFlashing");
+        if (!MoverSecond._ItIsPeremotka)
+        {
+            ButtonAnimator.ResetTrigger("nothing");
+            InvokeRepeating("PlaySpeechBeforeButton", 0, 12.5f);
+            _secondTimeLineWasPaused = true;
+            director.playableGraph.GetRootPlayable(0).SetSpeed(0);
+            ButtonAnimator.Play("ReasonsAndFeaturesFlashing");
+            
+        }
+        MoverSecond._ItIsPeremotka = false;
     }
 
     public void Pause2()
     {
-        ButtonAnimator.ResetTrigger("nothing");
-        _secondTimeLineWasPaused = true;
-        director.playableGraph.GetRootPlayable(0).SetSpeed(0);
-        Models.Play("ModelsIdle");
-        ButtonAnimator.Play("ReasonsAndFeaturesFlashing");
+        if (!MoverSecond._ItIsPeremotka)
+        {
+            ButtonAnimator.ResetTrigger("nothing");
+            _secondTimeLineWasPaused = true;
+            director.playableGraph.GetRootPlayable(0).SetSpeed(0);
+            Models.Play("ModelsIdle");
+            ButtonAnimator.Play("ReasonsAndFeaturesFlashing");
+        }
+        MoverSecond._ItIsPeremotka = false;
     }
 
     public void Pause3()
@@ -91,6 +100,7 @@ public class StopTimeline2 : MonoBehaviour
             ButtonAnimator.SetTrigger("nothing");
 
         }
+        MoverSecond._ItIsPeremotka = false;
     }
 
 

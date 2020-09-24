@@ -122,5 +122,6 @@ public class VisualizationViewController : ViewController
         _view.HideActivePopup();
         _view.ActivateUI(true);
         audioControllerBeforePlaced.StopAfterPlaced();
+        go.GetComponent<Visualization>().StartCloseAnim += GetComponent<CloseAnimController>().StartAnim;
     }
 }

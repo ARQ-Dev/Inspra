@@ -50,4 +50,12 @@ public class AudioControllerBeforePlaced : MonoBehaviour
         _mainAS.Stop();
     }
 
+    private void OnDisable()
+    {
+        _mainAS.clip = null;
+    }
+    private void OnEnable()
+    {
+        _mainAS.clip = null;
+    }
 }
