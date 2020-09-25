@@ -43,6 +43,7 @@ public class Mover : MonoBehaviour
                     _director.GetComponent<AudioSource>().Stop();
                     _director.playableGraph.GetRootPlayable(0).SetSpeed(1);
                     _ControllerTimeLine.CancelInvoke();
+                    _director.gameObject.GetComponent<Visualization>().ResumeBackMusic();
                     break;
                 }
             }
@@ -68,6 +69,7 @@ public class Mover : MonoBehaviour
                 _director.GetComponent<AudioSource>().Stop();
                 _director.playableGraph.GetRootPlayable(0).SetSpeed(1);
                 _ControllerTimeLine.CancelInvoke();
+                _director.gameObject.GetComponent<Visualization>().ResumeBackMusic();
                 break;
             }
         }

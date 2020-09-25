@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
@@ -52,14 +53,21 @@ public class StopTimeline2 : MonoBehaviour
 
     public void Pause3()
     {
-        
+        StartCoroutine(Wait(3, director.gameObject.GetComponent<Visualization>().OnStartClose));
         _secondTimeLineWasPaused = true;
         director.playableGraph.GetRootPlayable(0).SetSpeed(0);
         
     }
    
+    IEnumerator Wait(float time, Action callback)
+    {
+        yield return new WaitForSeconds(time);
+        callback?.Invoke();
+    }
+
     public void UnPause3()
     {
+        StopAllCoroutines();
         _secondTimeLineWasPaused = false;
         director.playableGraph.GetRootPlayable(0).SetSpeed(1);
     }
@@ -114,6 +122,7 @@ public class StopTimeline2 : MonoBehaviour
         _mainAudioSource.Stop();
         director.time = 171.8f;
         director.playableGraph.GetRootPlayable(0).SetSpeed(1);
+        director.gameObject.GetComponent<Visualization>().ResumeBackMusic();
     }
 
     public void ReturnInspra()
@@ -121,6 +130,7 @@ public class StopTimeline2 : MonoBehaviour
         _mainAudioSource.Stop();
         director.time = 144.5f;
         director.playableGraph.GetRootPlayable(0).SetSpeed(1);
+        director.gameObject.GetComponent<Visualization>().ResumeBackMusic();
     }
 
     public void Reasons()
@@ -128,5 +138,6 @@ public class StopTimeline2 : MonoBehaviour
         _mainAudioSource.Stop();
         director.time = 99;
         director.playableGraph.GetRootPlayable(0).SetSpeed(1);
+        director.gameObject.GetComponent<Visualization>().ResumeBackMusic();
     }
 }

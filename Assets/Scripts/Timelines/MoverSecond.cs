@@ -53,6 +53,7 @@ public class MoverSecond : MonoBehaviour
                     _director.GetComponent<AudioSource>().Stop();
                     _director.playableGraph.GetRootPlayable(0).SetSpeed(1);
                     _ControllerTimeLine.CancelInvoke();
+                    _director.gameObject.GetComponent<Visualization>().ResumeBackMusic();
                     break;
                 }
             }
@@ -79,6 +80,7 @@ public class MoverSecond : MonoBehaviour
                 _director.GetComponent<AudioSource>().Stop();
                 _director.playableGraph.GetRootPlayable(0).SetSpeed(1);
                 _ControllerTimeLine.CancelInvoke();
+                _director.gameObject.GetComponent<Visualization>().ResumeBackMusic();
                 break;
             }
         }

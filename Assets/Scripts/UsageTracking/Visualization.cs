@@ -19,6 +19,11 @@ public class Visualization : MonoBehaviour
         _backgroundMusicSource.Stop();
     }
 
+    public void ResumeBackMusic()
+    {
+        if(!_backgroundMusicSource.isPlaying)
+            _backgroundMusicSource.Play();
+    }
 
     public int Number { get { return _number; } }
 }
