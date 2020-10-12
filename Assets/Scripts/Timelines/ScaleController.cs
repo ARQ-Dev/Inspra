@@ -14,6 +14,10 @@ public class ScaleController : MonoBehaviour
     }
     private void OnEnable()
     {
+        if (_slider.gameObject.activeSelf)
+            GetComponent<Visualization>()._isAr = true;
+
+
         if (PlayerPrefs.HasKey("ScaleVis"))
         {
             _slider.value = PlayerPrefs.GetFloat("ScaleVis");

@@ -8541,6 +8541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _number: 2
+  _isAr: 0
   _backgroundMusicSource: {fileID: 1484410476}
 --- !u!114 &5302088650713965628
 MonoBehaviour:

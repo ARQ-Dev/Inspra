@@ -51,7 +51,10 @@ public class stopTimeline : MonoBehaviour
 
     public void Pause()
     {
-        Solve.Play("SolveProblemAppearing");
+        if(director.gameObject.GetComponent<Visualization>()._isAr)
+            Solve.Play("SolveProblemAppearing");
+        else
+            Solve.Play("SolveProblemAppearing3D");
         _mainAudioSource.Stop();
         director.playableGraph.GetRootPlayable(0).SetSpeed(0);
         InvokeRepeating("PlaySpeech", 2, 12.5f);

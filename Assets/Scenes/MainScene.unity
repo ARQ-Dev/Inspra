@@ -4187,8 +4187,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3733732d0fda241a784a6e7d766810fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _first: {fileID: 6020869848687279100, guid: 3eb7e976492c5459fa2c31db2913d517, type: 3}
-  _second: {fileID: 3445209808049614132, guid: 653099d1ddd0a3d4cbbac2e65c047574, type: 3}
+  _first: {fileID: 6020869848687279100, guid: 8ebae18d26595354e936c0ce24a694f8, type: 3}
+  _second: {fileID: 3445209808049614132, guid: f04f7f94481c8114d95e96eca007fe12, type: 3}
   _positioner: {fileID: 2077011466}
   _rotateModel: {fileID: 1407337164}
 --- !u!1 &1709799861 stripped

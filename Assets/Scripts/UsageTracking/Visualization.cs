@@ -8,6 +8,8 @@ public class Visualization : MonoBehaviour
     [SerializeField]
     private int _number;
 
+    public bool _isAr = false;
+
     [SerializeField]
     private AudioSource _backgroundMusicSource;
 
