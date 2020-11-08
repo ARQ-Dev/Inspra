@@ -24,10 +24,6 @@ public class MoverSecond : MonoBehaviour
     {
         _timingList = new List<float> { 0.0f, 42.86f, 105.2f, 128.18f };
     }
-    private void Update()
-    {
-        Debug.Log(_ItIsPeremotka);
-    }
     public void NextMove()
     {
 

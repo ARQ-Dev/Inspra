@@ -7508,7 +7508,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 16777215
   m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -14818,7 +14818,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 1946157055
   m_fontColor: {r: 1, g: 1, b: 1, a: 0.45007405}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -25367,6 +25367,12 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -6745725433989327058, guid: d2aa98830462a0543af6798b06447a14,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 3286163911610860551, guid: 9d2747a2e38cc444c8e6c4cf4e1b1805,
+        type: 3}
     - target: {fileID: -6231835423844601913, guid: d2aa98830462a0543af6798b06447a14,
         type: 3}
       propertyPath: m_Name
@@ -26101,6 +26107,12 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -217770962848046449, guid: d11589255fd21984a93f991a3cc004fb,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 3286163911610860551, guid: a8b397681fa7bc240baf7b61f65b9802,
+        type: 3}
     - target: {fileID: 970536344695997879, guid: d11589255fd21984a93f991a3cc004fb,
         type: 3}
       propertyPath: m_Name

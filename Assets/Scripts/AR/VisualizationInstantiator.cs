@@ -13,6 +13,12 @@ public class VisualizationInstantiator : MonoBehaviour
     private GameObject _second;
 
     [SerializeField]
+    private GameObject _first3D;
+
+    [SerializeField]
+    private GameObject _second3D;
+
+    [SerializeField]
     private PlanePositioner _positioner;
 
     private GameObject _istantiatedPrefab;
@@ -55,7 +61,7 @@ public class VisualizationInstantiator : MonoBehaviour
         }
         else
         {
-            _istantiatedPrefab = Instantiate(_first, Vector3.zero, Quaternion.identity);
+            _istantiatedPrefab = Instantiate(_first3D, Vector3.zero, Quaternion.identity);
             StartCoroutine(InstantiatedCor());
         }
 
@@ -84,7 +90,7 @@ public class VisualizationInstantiator : MonoBehaviour
         }
         else
         {
-            _istantiatedPrefab = Instantiate(_second, Vector3.zero, Quaternion.identity);
+            _istantiatedPrefab = Instantiate(_second3D, Vector3.zero, Quaternion.identity);
             StartCoroutine(InstantiatedCor());
         }
 
