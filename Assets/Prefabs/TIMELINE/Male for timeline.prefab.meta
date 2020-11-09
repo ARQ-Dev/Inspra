@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Prefabs/AR/Indicator.prefab.meta
+guid: 3eb7e976492c5459fa2c31db2913d517
+=======
 guid: 1bd54a4005ef185489c99c0f24784bb9
+>>>>>>> develop:Assets/Prefabs/TIMELINE/Male for timeline.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 

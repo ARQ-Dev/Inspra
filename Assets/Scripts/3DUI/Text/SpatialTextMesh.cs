@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace ARQ.UIKit.TD
+namespace ARQ.UI.TD
 {
     public class SpatialTextMesh : MonoBehaviour
     {

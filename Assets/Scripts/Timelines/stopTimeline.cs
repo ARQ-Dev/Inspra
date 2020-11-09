@@ -8,19 +8,58 @@ public class stopTimeline : MonoBehaviour
     public PlayableDirector director;
     public Animator Male;
     public Animator Level;
-    public AudioSource audioSource;
+    public Animator Solve;
+    public static bool _firstTimeLineWasPaused = false;
+    public AudioSource _mainAudioSource;
+    public AudioClip _speechBeforeButton;
+    private int _speechCounter = 0;
+    private PauseController _pauseController;
     void OnEnable()
     {
-        director.playableGraph.GetRootPlayable(0).SetSpeed(0);
-        Male.Play("MaleFlash");
-        Level.Play("IndicatorFlash");
+        _pauseController = director.GetComponent<PauseController>();
+    }
 
-
+    void PlaySpeech()
+    {
+        if (!_pauseController.TimelineWasPaused())
+        {
+            _mainAudioSource.Stop();
+            _mainAudioSource.clip = _speechBeforeButton;
+            _mainAudioSource.Play();
+            _speechCounter++;
+            if (_speechCounter == 4)
+            {
+                CancelInvoke();
+                _speechCounter = 0;
+            }
+        }
     }
 
     public void UnPause()
     {
-        director.playableGraph.GetRootPlayable(0).SetSpeed(1);
+        if (!_pauseController.TimelineWasPaused())
+        {
+            CancelInvoke();
+            _speechCounter = 0;
+            _firstTimeLineWasPaused = false;
+            _mainAudioSource.Stop();
+            director.playableGraph.GetRootPlayable(0).SetSpeed(1);
+            Solve.Play("SwitchSolveButton");
+        }
     }
-    
+
+
+    public void Pause()
+    {
+        if(director.gameObject.GetComponent<Visualization>()._isAr)
+            Solve.Play("SolveProblemAppearing");
+        else
+            Solve.Play("SolveProblemAppearing3D");
+        _mainAudioSource.Stop();
+        director.playableGraph.GetRootPlayable(0).SetSpeed(0);
+        InvokeRepeating("PlaySpeech", 2, 12.5f);
+        Level.Play("IndicatorFlash");
+        Male.Play("MaleFlash");
+        _firstTimeLineWasPaused = true;
+    }
 }

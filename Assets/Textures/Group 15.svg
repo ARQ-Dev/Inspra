@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1000px" height="1000px" viewBox="0 0 1000 1000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 15</title>
+    <g id="UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-15" fill-rule="nonzero">
+            <path d="M500,0 C776.142375,0 1000,223.857625 1000,500 C1000,776.142375 776.142375,1000 500,1000 L500,900 L500,900 C720.9139,900 900,720.9139 900,500 C900,279.0861 720.9139,100 500,100 L500,0 L500,0 Z" id="Combined-Shape" fill="#32AD28"></path>
+            <path d="M500,0 L500,100 L500,100 C279.0861,100 100,279.0861 100,500 C100,720.9139 279.0861,900 500,900 L500,1000 L500,1000 C223.857625,1000 0,776.142375 0,500 C0,223.857625 223.857625,0 500,0 Z" id="Combined-Shape" fill="#3FA3F0"></path>
+        </g>
+    </g>
+</svg>
