@@ -2226,7 +2226,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 184549375
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 0.091864705}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -4666,7 +4666,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 1627389951
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 0.010986984}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -8577,7 +8577,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8136060981956901517}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -11425,7 +11425,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4227858431
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -11818,6 +11818,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8405591714160786881}
     m_Modifications:
+    - target: {fileID: -5178661895559278292, guid: f0aedd94baccade44a095a63c3313ca9,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4068373912626513877, guid: 4393e819444ea8b4ebb533157c5b83d4,
+        type: 3}
     - target: {fileID: -4216859302048453862, guid: f0aedd94baccade44a095a63c3313ca9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11886,7 +11892,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: f0aedd94baccade44a095a63c3313ca9,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 59.14273
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: f0aedd94baccade44a095a63c3313ca9,
         type: 3}
@@ -13060,6 +13066,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8405591714160786881}
     m_Modifications:
+    - target: {fileID: -5178661895559278292, guid: f0aedd94baccade44a095a63c3313ca9,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4068373912626513877, guid: 4393e819444ea8b4ebb533157c5b83d4,
+        type: 3}
     - target: {fileID: -4216859302048453862, guid: f0aedd94baccade44a095a63c3313ca9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13128,7 +13140,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: f0aedd94baccade44a095a63c3313ca9,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 50.69378
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: f0aedd94baccade44a095a63c3313ca9,
         type: 3}

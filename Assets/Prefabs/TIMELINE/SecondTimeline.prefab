@@ -7508,7 +7508,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -15405,7 +15405,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 16777215
   m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -24349,6 +24349,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3445209809330584585}
     m_Modifications:
+    - target: {fileID: -5178661895559278292, guid: f0aedd94baccade44a095a63c3313ca9,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4068373912626513877, guid: 4393e819444ea8b4ebb533157c5b83d4,
+        type: 3}
     - target: {fileID: -4216859302048453862, guid: f0aedd94baccade44a095a63c3313ca9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24417,7 +24423,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: f0aedd94baccade44a095a63c3313ca9,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 43.87773
+      value: 25.3
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: f0aedd94baccade44a095a63c3313ca9,
         type: 3}
@@ -24449,6 +24455,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3445209809330584585}
     m_Modifications:
+    - target: {fileID: -5178661895559278292, guid: f0aedd94baccade44a095a63c3313ca9,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4068373912626513877, guid: 4393e819444ea8b4ebb533157c5b83d4,
+        type: 3}
     - target: {fileID: -4216859302048453862, guid: f0aedd94baccade44a095a63c3313ca9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24517,7 +24529,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: f0aedd94baccade44a095a63c3313ca9,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 37.609486
+      value: 23.91
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: f0aedd94baccade44a095a63c3313ca9,
         type: 3}
